@@ -72,15 +72,19 @@
                 <!-- Input fields for velocity and distance -->
                 <div>
                     <div class="input-container">
-                        <h2>Velocity:</h2>
-                        <label for="velocity-field"></label>
+
+                        <label for="velocity-field">
+                            Velocity:
+                        </label>
                         <input id="velocity-field" type="text">
                         <span class="velocity">v</span>
                     </div>
                     <div class="input-container">
-                        <h2>Distance in Km:</h2>
-                        <label for="distance-km-field"></label>
-                        <input id="distance-km-field" type="text">
+
+                        <label for="distance-km-field">
+                            Distance in Km:
+                        </label>
+                        <input id="distance-km-field" type="text" aria-label="Distance in km">
                         <span class="distance">s</span>
                     </div>
                 </div>
@@ -88,13 +92,17 @@
                 <div>
                     <h2>Time:</h2>
                     <div class="output-container">
-                        <label for="time-field"></label>
+                        <label for="time-field">
+                            Time:
+                        </label>
                         <input id="time-field" type="text">
                         <span class="time">t</span>
                     </div>
                     <div class="output-container">
-                        <h2>Distance in Mi:</h2>
-                        <label for="distance-mi-field"></label>
+
+                        <label for="distance-mi-field">
+                            Distance in Mi:
+                        </label>
                         <input id="distance-mi-field" type="text">
                         <span class="conversion">s</span>
                     </div>
@@ -108,29 +116,34 @@
                 <!-- Input fields for distance and consumption -->
                 <div>
                     <div class="input-container">
-                        <h2>Travel Distance:</h2>
-                        <label for="distance-fuel-field"></label>
+
+                        <label for="distance-fuel-field">
+                            Travel Distance:
+                        </label>
                         <input id="distance-fuel-field" type="text">
                         <span class="distance-fuel">d</span>
                     </div>
                     <div class="input-container">
-                        <h2>Fuel Consumption:</h2>
-                        <label for="distance-consumption-field"></label>
+                        <label for="distance-consumption-field">
+                            Fuel Consumption:
+                        </label>
                         <input id="distance-consumption-field" type="text">
                         <span class="distance-consumption">v</span>
                     </div>
                 </div>
                 <!-- Output fields for price per unit and cost -->
                 <div>
-                    <h2>Price per unit of fuel:</h2>
                     <div class="output-container">
-                        <label for="price-per-unit-field"></label>
+                        <label for="price-per-unit-field">
+                            Price per unit of fuel:
+                        </label>
                         <input id="price-per-unit-field" type="text">
                         <span class="price-per-unit">p</span>
                     </div>
                     <div class="output-container">
-                        <h2>Cost:</h2>
-                        <label for="cost-fuel-field"></label>
+                        <label for="cost-fuel-field">
+                            Cost:
+                        </label>
                         <input id="cost-fuel-field" type="text">
                         <span class="cost-fuel">c</span>
                     </div>
@@ -144,7 +157,9 @@
                 <!-- Input fields for transportation mode and fuel type -->
                 <div>
                     <div class="input-container">
-                        <h2>Transportation Mode:</h2>
+                        <label for="transportation-mode">
+                            Transportation Mode:
+                        </label>
                         <select id="transportation-mode">
                             <option value="car">Car</option>
                             <option value="bus">Bus</option>
@@ -152,7 +167,10 @@
                         </select>
                     </div>
                     <div class="input-container">
-                        <h2>Fuel Type:</h2>
+
+                        <label for="fuel-type">
+                            Fuel Type:
+                        </label>
                         <select id="fuel-type">
                             <option value="gasoline">Gasoline</option>
                             <option value="diesel">Diesel</option>
@@ -162,9 +180,10 @@
                 </div>
                 <!-- Output field for displaying CO₂ footprint -->
                 <div>
-                    <h2>CO₂ Footprint:</h2>
                     <div class="output-container">
-                        <label for="co2-footprint-field"></label>
+                        <label for="co2-footprint-field">
+                            CO₂ Footprint:
+                        </label>
                         <input id="co2-footprint-field" type="text" readonly>
                         <span class="co2-footprint">CO₂</span>
                     </div>
