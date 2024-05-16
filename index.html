@@ -9,9 +9,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name=" author" content="Kal Development - Lorry127">
-    <!-- Title -->
     <title>PP-2_V3</title>
-    <!-- Favicon -->
+    <!-- Favicon links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -67,35 +66,34 @@
             </div>
         </section>
 
+        <!-- Velocity, Distance, and Time calculation section -->
         <section id="vst">
             <div class="container">
+                <!-- Input fields for velocity and distance -->
                 <div>
                     <div class="input-container">
                         <h2>Velocity:</h2>
-                        <!--  -->
                         <label for="velocity-field"></label>
                         <input id="velocity-field" type="text">
                         <span class="velocity">v</span>
                     </div>
                     <div class="input-container">
                         <h2>Distance in Km:</h2>
-                        <!-- -->
                         <label for="distance-km-field"></label>
                         <input id="distance-km-field" type="text">
                         <span class="distance">s</span>
                     </div>
                 </div>
+                <!-- Output fields for time and distance conversion -->
                 <div>
                     <h2>Time:</h2>
                     <div class="output-container">
-                        <!-- -->
                         <label for="time-field"></label>
                         <input id="time-field" type="text">
                         <span class="time">t</span>
                     </div>
                     <div class="output-container">
                         <h2>Distance in Mi:</h2>
-                        <!--  -->
                         <label for="distance-mi-field"></label>
                         <input id="distance-mi-field" type="text">
                         <span class="conversion">s</span>
@@ -104,35 +102,34 @@
             </div>
         </section>
 
+        <!-- Fuel consumption and cost calculation section -->
         <section id="">
             <div class="container">
+                <!-- Input fields for distance and consumption -->
                 <div>
                     <div class="input-container">
                         <h2>Distance:</h2>
-                        <!--  -->
                         <label for="distance-fuel-field"></label>
                         <input id="distance-fuel-field" type="text">
                         <span class="distance-fuel">d</span>
                     </div>
                     <div class="input-container">
                         <h2>Consumption:</h2>
-                        <!-- -->
                         <label for="distance-consumption-field"></label>
                         <input id="distance-consumption-field" type="text">
                         <span class="distance-consumption">v</span>
                     </div>
                 </div>
+                <!-- Output fields for price per unit and cost -->
                 <div>
                     <h2>Price per unit of fuel:</h2>
                     <div class="output-container">
-                        <!-- -->
                         <label for="price-per-unit-field"></label>
                         <input id="price-per-unit-field" type="text">
                         <span class="price-per-unit">p</span>
                     </div>
                     <div class="output-container">
                         <h2>Cost:</h2>
-                        <!--  -->
                         <label for="cost-fuel-field"></label>
                         <input id="cost-fuel-field" type="text">
                         <span class="cost-fuel">c</span>
@@ -141,38 +138,35 @@
             </div>
         </section>
 
-        <section id="">
+        <!-- CO2 Footprint calculation section -->
+        <section id="co2-footprint">
             <div class="container">
+                <!-- Input fields for transportation mode and fuel type -->
                 <div>
                     <div class="input-container">
-                        <h2>Distance:</h2>
-                        <!--  -->
-                        <label for="distance-fuel-field"></label>
-                        <input id="distance-fuel-field" type="text">
-                        <span class="distance-fuel">d</span>
+                        <h2>Transportation Mode:</h2>
+                        <select id="transportation-mode">
+                            <option value="car">Car</option>
+                            <option value="bus">Bus</option>
+                            <option value="train">Train</option>
+                        </select>
                     </div>
                     <div class="input-container">
-                        <h2>Consumption:</h2>
-                        <!-- -->
-                        <label for="distance-consumption-field"></label>
-                        <input id="distance-consumption-field" type="text">
-                        <span class="distance-consumption">v</span>
+                        <h2>Fuel Type:</h2>
+                        <select id="fuel-type">
+                            <option value="gasoline">Gasoline</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="electricity">Electricity</option>
+                        </select>
                     </div>
                 </div>
+                <!-- Output field for displaying CO₂ footprint -->
                 <div>
-                    <h2>Price per unit of fuel:</h2>
+                    <h2>CO₂ Footprint:</h2>
                     <div class="output-container">
-                        <!-- -->
-                        <label for="price-per-unit-field"></label>
-                        <input id="price-per-unit-field" type="text">
-                        <span class="price-per-unit">p</span>
-                    </div>
-                    <div class="output-container">
-                        <h2>Cost:</h2>
-                        <!--  -->
-                        <label for="cost-fuel-field"></label>
-                        <input id="cost-fuel-field" type="text">
-                        <span class="cost-fuel">c</span>
+                        <label for="co2-footprint-field"></label>
+                        <input id="co2-footprint-field" type="text" readonly>
+                        <span class="co2-footprint">CO₂</span>
                     </div>
                 </div>
             </div>
