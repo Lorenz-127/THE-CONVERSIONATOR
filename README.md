@@ -1,112 +1,242 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## PP2
 
-Welcome USER_NAME,
+## Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### The live link can be found here - [name](link)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+![Responsive Mockup]()
 
-## Gitpod Reminders
+Link to [responsive Mockup]()
+---
+## CONTENTS
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [User Experience](#user-experience)
+  * [User Stories](#user-stories)
 
-`python3 -m http.server`
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Wireframes](#wireframes)
 
-A blue button should appear to click: _Make Public_,
+* [Features](#features)
+  * [Existing Features](#existing-features)
+  * [Features Left to Implement](#features-left-to-implement)
+  * [Accessibility](#accessibility)
 
-Another blue button should appear to click: _Open Browser_.
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Programs Used](#programs-used)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* [Deployment & Local Development](#deployment-and-local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
 
-A blue button should appear to click: _Make Public_,
+* [Testing](#testing)
 
-Another blue button should appear to click: _Open Browser_.
+* [Credits](#credits)
+  * [Content](#content)
+  * [Acknowledgments](#acknowledgements)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Experience
 
-To log into the Heroku toolbelt CLI:
+### Main Idea
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Project Goal
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Target Audience
 
-------
+### User Goals
 
-## Release History
+### Site Owner Goals
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### User stories
 
-**April 26 2024:** Update node version to 16
+- #### First-Time Visitor Goals
 
-**September 20 2023:** Update Python version to 3.9.17.
+- #### Returning Visitor Goals
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- #### Frequent User Goals
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Owner Goals
+- #### First-Time Visitor Goals
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- #### Returning Visitor Goals
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- #### Frequent User Goals
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+[Top](#contents)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Design  
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Colour Scheme
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![colour palette]()
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Typography
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+  ![Montserrat]()
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  ![Work-Sans]()
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+[Top](#contents)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Wireframes  
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### Lofi Design
 
-------
+#### Home 
 
-## FAQ about the uptime script
+![wire-desktop-large]()
 
-**Why have you added this script?**
+- Desktop basic
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![wire-desktop-basic]()
 
-**How will this affect me?**
+- Tablet
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![wire-tablet]()
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- Mobile
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![wire-mobile]()
 
-**So….?**
+[Top](#contents)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Features
 
-**Can I opt out?**
+### Header
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Footer
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Home
 
-**Anything more?**
+### JavaScript
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[Top](#contents)
 
 ---
 
-Happy coding!
+### Existing Features
+
+### Feature 1
+
+### Feature 2
+
+[Top](#contents)
+
+### Accessibility
+
+### Features Left to Implement
+
+#### Feature 1
+
+[Top](#contents)
+
+## Testing
+
+- ### [Link to testing.md](testing.md)
+
+
+### Bug Fixes in the Production Process
+
+### Bug Fixes through after validation
+
+### Bug Fixes caused through changes after validation
+
+[Top](#contents)
+
+### Unfixed Bugs
+
+## Technologies Used
+
+**Github** - Used for storage of my site and for publishing online.\
+**Gitpod** - The IDE used for editing my site and pushing changes.\
+**Python** - Used python 3 via terminal to preview my site using a local http server.\
+**HTML5** - The core of the site was built with HTML version 5.\
+**CSS** - CSS was used to style the website and define fonts and layout.\
+**JavaScript** - JavaScript was used for the logic elements on the website.\
+**Youtube** - Videos embedded from Youtube.\
+**Font Awesome** - Social Media icons from Font Awesome.\
+**Google Chrome** - The website was built and tested in google Chrome.\
+**TinyPNG Website** - Used to compress images so they load faster.\
+**Favicon Generator Website** - Converted PNG file that I made from the logo using photoshop and converted it into a favicon on website favicon.io\
+
+
+### Languages Used
+
+- **HTML**
+- **CSS**
+- **JavaScript**
+
+### Programs Used
+
+- **Github**   - I GitHub for the storage of my site and Gitpages to publish my website.
+- **Balsamiq** - Balsamiq was the choice for the wireframes.
+- **MS-Paint** - MS-Paint for some of my image resizing.
+- **VS-Code**  - VS-Code Destop for various testing on a save playground.
+- **Slack**    - Slack to communicate with my Mentor, Peers and get some help and infos.
+
+[Top](#contents)
+
+# Deployment and Local Development
+
+## Deployment
+
+The site is deployed using GitHub Pages - [pp2](https://lorenz-127.github.io/pp2/)
+
+To Deploy the site using GitHub Pages by following these steps:
+
+1. Login (or signup) to Github.
+2. Go to the repository for this project, [lorenz-127/pp2](https://github.com/Lorenz-127/pp2).
+3. Click the settings button.
+4. Select pages in the left hand navigation menu.
+5. From the source dropdown select main branch and press save.
+6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
+## Local Development
+
+### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [lorenz-127/pp2](https://github.com/Lorenz-127/pp2)
+3. Click the Fork button in the top right corner.
+
+### How to Clone
+
+To clone the the repository:
+
+1. Log into your account on github
+2. Go to the repository of this project [lorenz-127/pp2](https://github.com/Lorenz-127/pp2)
+3. Click on the code button, and copy your preferred clone link.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal, paste the link you copied in step 3 and press enter.
+
+[Top](#contents)
+
+# Credits
+
+### Styles, Icons, Images
+
+### JavaScript
+
+[Top](#contents)
+
+### Content
+
+
+### Acknowledgements
+
+- My Peers in various Code Institute's Slack channels for their feedback and support.
+- All the great videos that are periodically posted by slack-bot in the various channels (You're a legend!)
+
+### Honourable mentions
+
+- I would like to thank my mentor Luke Buchanan, who adapted on the spot to my learning pace.
+
+- Vernell for his valuable and patient advice and tips to find the right path for solution. [LinkedIn](https://www.linkedin.com/in/vernellclark/) [GitHub](https://github.com/VCGithubCode)
+
+[Top](#contents)
