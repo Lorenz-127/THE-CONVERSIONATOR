@@ -27,9 +27,45 @@
 <body>
     <!-- Header -->
     <header>
+        <div class="header-container">
+            <h1>The Conversionator</h1>
+            <!-- Button to open the overlay navigation -->
+            <i class="fa-solid fa-gear" id="curtain-open"></i>
+        </div>
     </header>
     <!-- Main content -->
     <main>
+        <!-- Blur Content behind overlay -->
+        <div id="blur-content"></div>
+        <!-- Curtain Menu overlay -->
+        <nav id="curtain-menu" class="curtain-overlay">
+            <!-- Button to close the overlay navigation -->
+            <i class="fa-regular fa-circle-xmark" id="curtain-close"></i>
+
+            <!-- Overlay nav links -->
+            <ul class="overlay-nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Home / Welcome Section -->
+        <section>
+            <div class="home-container">
+                <ul class="home-nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+        </section>
 
     </main>
 
