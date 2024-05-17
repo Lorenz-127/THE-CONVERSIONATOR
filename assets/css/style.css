@@ -85,6 +85,10 @@ main {
     flex: 1 0 auto;
 }
 
+section {
+    margin-top: 2.5rem;
+}
+
 footer {
     background-color: transparent;
     display: flex;
