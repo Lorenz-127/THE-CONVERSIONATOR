@@ -169,6 +169,14 @@ i:hover {
     border-radius: 2px;
 }
 
+.fa-delete-left {
+    padding-right: 1rem;
+}
+
+.fa-delete-left:hover {
+    color: var(--clr-danger-light);
+}
+
 /* Header */
 .header-container {
     display: flex;
