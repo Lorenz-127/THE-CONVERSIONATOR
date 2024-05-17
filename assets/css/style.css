@@ -135,6 +135,42 @@ label {
     gap: 0.5rem;
 }
 
+.instructions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+}
+
+.instructions-container h2,
+.instructions-container h3,
+.instructions-container h4 {
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+.instructions {
+    padding: 0.5rem;
+    width: 90vw;
+    height: auto;
+    border: 1px solid var(--clr-accent-light);
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 4px 2px var(--clr-shadow-light);
+}
+
+.instructions ul {
+    padding-left: 0.8rem;
+    list-style: unset;
+}
+
+.instructions p {
+    padding: 0.25rem 0;
+
+}
+
+
 .input-field {
     width: 90%;
     height: 30px;
@@ -296,3 +332,18 @@ i:hover {
 #co2-footprint {
     display: none;
 }
+
+/* instructions section */
+#instructions {
+    display: block;
+}
+
+/* MARK Responsive Designs */
+
+/* For tablets  >= 480px */
+
+
+
+/* For tablets  >= 768px */
+
+/* For laptops >= 992px */
