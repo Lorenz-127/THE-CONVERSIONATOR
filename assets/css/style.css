@@ -167,3 +167,33 @@ footer {
     color: var(--clr-danger-light);
     z-index: 5;
 }
+
+/* Home Container */
+.home-container {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 80vw;
+    height: 250px;
+    border: 1px solid var(--clr-accent-light);
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 4px 2px var(--clr-shadow-light);
+    text-align: center;
+    perspective: 1000px;
+    display: block;
+}
+
+.home-nav-links {
+    font-family: var(--font-text);
+    font-size: larger;
+    font-weight: 600;
+}
+
+.home-nav-links li {
+    padding: 4px 0;
+}
+
+.home-nav-links li a:hover {
+    background-color: var(--clr-secondary-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
