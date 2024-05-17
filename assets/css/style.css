@@ -245,38 +245,25 @@ i:hover {
 }
 
 /* Home Container */
-#home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-container {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    width: 80vw;
-    height: 230px;
-    border: 1px solid var(--clr-accent-light);
-    border-radius: 0.5rem;
-    box-shadow: 2px 4px 4px 2px var(--clr-shadow-light);
-    text-align: center;
-    display: none;
-}
-
 .home-nav-links {
     font-family: var(--font-text);
     font-size: larger;
     font-weight: 600;
+    text-align: center;
 }
 
 .home-nav-links li {
-    padding: 4px 0;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
 }
 
-.home-nav-links li a:hover {
+.home-nav-links li:hover {
     background-color: var(--clr-secondary-light);
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+}
+
+/* home section */
+#home {
+    display: flex;
 }
 
 /* vst section */
