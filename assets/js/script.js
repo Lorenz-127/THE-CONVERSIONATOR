@@ -43,3 +43,43 @@ function formatNumberForLocale(number) {
     // Replace "," with "."
     return number.replace(",", ".");
 }
+
+/**
+ * Calculate Time and Distance, Convert distance to miles,
+ * Calculate the time required, Format time in hours and minutes
+ */
+function calculateTimeAndDistance() {
+    // Get the values from the input fields and replace "." with "," for German users
+    const velocity = parseFloat(
+        formatNumberForLocale(document.getElementById("velocity-field").value)
+    );
+    const distanceKm = parseFloat(
+        formatNumberForLocale(document.getElementById("distance-km-field").value)
+    );
+
+    // Validate input
+    if (isNaN(velocity) || isNaN(distanceKm)) {
+        return; // Exit function if input is invalid
+    }
+
+    // Calculate time in hours
+    const timeInHours = distanceKm / velocity;
+
+    // Convert distance to miles (1 km = 0.621371 miles)
+    const distanceMi = distanceKm * 0.621371;
+
+    // Calculate remaining minutes
+    const remainingMinutes = Math.round(
+        (timeInHours - Math.floor(timeInHours)) * 60
+    );
+
+    // Format time in hours and minutes
+    const formattedTime =
+        Math.floor(timeInHours) + "h " + remainingMinutes + "min";
+
+    // Update output fields
+    document.getElementById("time-field").value = formattedTime;
+    document.getElementById("distance-mi-field").value =
+        distanceMi.toFixed(2) + " miles";
+    distanceMi.toFixed(2) + " miles";
+}
