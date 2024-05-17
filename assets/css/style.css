@@ -219,3 +219,18 @@ i:hover {
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
 }
+
+/* vst section */
+#vst {
+    display: block;
+}
+
+/* fuel consumption */
+#fuel-consumption {
+    display: none;
+}
+
+/* co2 footprint */
+#co2-footprint {
+    display: none;
+}
