@@ -315,20 +315,20 @@ i:hover {
 
 /* home section */
 #home {
-    display: flex;
+    display: none;
 }
 
 /* vst section */
 #vst {
-    display: block;
+    display: none;
 }
 
-/* fuel consumption */
+/* fuel consumption section */
 #fuel-consumption {
     display: none;
 }
 
-/* co2 footprint */
+/* co2 footprint section */
 #co2-footprint {
     display: none;
 }
