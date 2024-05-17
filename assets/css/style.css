@@ -17,6 +17,8 @@
     --clr-danger-light: #ff0033;
     --clr-overlay: #1c1d2094;
     --clr-blur-content: #00000023;
+    --clr-shadow-light: #00000080;
+    --clr-dark: #e9e9eb80;
 
     /* Colors theme-dark */
     --clr-background-dark: #101114;
