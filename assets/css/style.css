@@ -102,3 +102,48 @@ footer {
     flex-grow: 1;
     text-align: center;
 }
+
+/* Curtain Menu */
+.curtain-overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: var(--clr-overlay);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-nav-links {
+    position: relative;
+    top: 5rem;
+    width: 100vw;
+    text-align: center;
+}
+
+.curtain-overlay li {
+    margin-bottom: 1rem;
+}
+
+.curtain-overlay li:hover {
+    transform: scale(1.7);
+}
+
+.curtain-overlay a {
+    color: var(--clr-primary-light);
+    font-family: var(--font-text);
+    font-weight: 600;
+}
+
+#curtain-close {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--clr-danger-light);
+    z-index: 5;
+}
