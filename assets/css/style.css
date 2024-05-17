@@ -99,6 +99,13 @@ footer {
     width: 100%;
 }
 
+/* Utilities */
+.flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Containers, labels, and inputs  */
 .container {
     margin-top: 1rem;
