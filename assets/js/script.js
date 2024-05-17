@@ -37,3 +37,9 @@ document.addEventListener("input", function (event) {
         calculateCO2Footprint();
     }
 });
+
+// Add global function to replace "," with "." for German users
+function formatNumberForLocale(number) {
+    // Replace "," with "."
+    return number.replace(",", ".");
+}
