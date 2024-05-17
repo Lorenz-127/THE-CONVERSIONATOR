@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colors theme-light */
+    --clr-background-light: #adcac4;
+    --clr-primary-light: #e0e0e0;
+    --clr-secondary-light: #b0b0b0;
+    --clr-accent-light: #1c1d20;
+    --clr-text-light: #101114;
+    --clr-danger-light: #ff0033;
+    --clr-overlay: #1c1d2094;
+    --clr-blur-content: #00000023;
+
+    /* Colors theme-dark */
+    --clr-background-dark: #101114;
+    --clr-primary-dark: #1c1d20;
+    --clr-secondary-dark: #b0b0b0;
+    --clr-accent-dark: #adcac4;
+    --clr-text-dark: #e0e0e0;
+    --clr-danger-dark: #ff0033;
+
+    /* Font families */
+    --font-title: "Alfa Slab One", serif;
+    --font-text: "Lato", sans-serif;
+}
