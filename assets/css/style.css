@@ -86,12 +86,12 @@ main {
 }
 
 footer {
-    background-color: var(--clr-background-light);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-top: 8px;
-    height: 70px;
+    height: 50px;
     width: 100%;
 }
 
