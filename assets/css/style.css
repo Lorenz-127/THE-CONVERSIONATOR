@@ -99,16 +99,12 @@ footer {
     width: 100%;
 }
 
-/* Containers and inputs */
+/* Containers, labels, and inputs  */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 1rem;
     padding: 0.5rem;
-    width: 80vw;
-    height: 200px;
+    width: 90vw;
+    height: 350px;
     border: 1px solid var(--clr-accent-light);
     border-radius: 0.5rem;
     box-shadow: 2px 4px 4px 2px var(--clr-shadow-light);
@@ -131,8 +127,9 @@ i:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 95vw;
     align-items: center;
+    padding: 0 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--clr-text-light);
 }
