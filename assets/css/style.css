@@ -92,8 +92,10 @@ footer {
 .header-container {
     display: flex;
     justify-content: center;
-    width: 80dvw;
+    width: 90vw;
     align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--clr-text-light);
 }
 
 .header-container h1 {
