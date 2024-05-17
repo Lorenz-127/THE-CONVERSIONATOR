@@ -89,6 +89,18 @@ footer {
     width: 100%;
 }
 
+/* Icons and Buttons */
+i {
+    cursor: pointer;
+    transition: 200ms ease;
+    color: var(--clr-text-light);
+}
+
+i:hover {
+    transform: scale(1.7);
+    border-radius: 2px;
+}
+
 /* Header */
 .header-container {
     display: flex;
