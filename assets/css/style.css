@@ -103,6 +103,26 @@ footer {
     text-align: center;
 }
 
+/* Blur Content behind overlay */
+#blur-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: var(--clr-blur-content);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 4;
+}
+
+#blur-content.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Curtain Menu */
 .curtain-overlay {
     display: none;
