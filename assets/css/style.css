@@ -49,8 +49,11 @@ body {
 }
 
 header {
-    margin-top: 1rem;
+    position: fixed;
+    height: auto;
+    background-color: var(--clr-background-light);
     max-width: 900px;
+    padding-top: 1rem;
     justify-content: center;
     align-items: center;
 }
