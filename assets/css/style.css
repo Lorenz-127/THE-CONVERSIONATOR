@@ -110,6 +110,45 @@ footer {
     box-shadow: 2px 4px 4px 2px var(--clr-shadow-light);
 }
 
+.container h2 {
+    margin: 0.5rem 0.5rem 0.5rem;
+}
+
+label {
+    font-size: large;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.output-container,
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-field {
+    width: 90%;
+    height: 30px;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-family: var(--font-text);
+    font-size: medium;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--clr-secondary-light);
+    caret-color: var(--clr-text-light);
+    resize: none;
+    overflow: auto;
+}
+
+option {
+    font-family: var(--font-text);
+    font-size: medium;
+    font-weight: 600;
+}
+
 /* Icons and Buttons */
 i {
     cursor: pointer;
