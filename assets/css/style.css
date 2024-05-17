@@ -46,14 +46,15 @@ body {
 }
 
 header {
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-width: 900px;
     justify-content: center;
     align-items: center;
 }
 
-h1 {
-    font-size: 1rem;
+h1,
+h2 {
+    font-size: 0.75rem;
     font-weight: 400;
     font-family: var(--font-title);
     text-transform: uppercase;
@@ -91,8 +92,9 @@ footer {
 /* Header */
 .header-container {
     display: flex;
-    justify-content: center;
-    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     align-items: center;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--clr-text-light);
@@ -101,6 +103,7 @@ footer {
 .header-container h1 {
     flex-grow: 1;
     text-align: center;
+    padding-right: 2rem;
 }
 
 /* Blur Content behind overlay */
@@ -169,16 +172,21 @@ footer {
 }
 
 /* Home Container */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .home-container {
     margin-top: 1rem;
     padding: 0.5rem;
     width: 80vw;
-    height: 250px;
+    height: 230px;
     border: 1px solid var(--clr-accent-light);
     border-radius: 0.5rem;
     box-shadow: 2px 4px 4px 2px var(--clr-shadow-light);
     text-align: center;
-    perspective: 1000px;
     display: block;
 }
 
