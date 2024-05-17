@@ -71,27 +71,23 @@
             <div class="container">
                 <h2>Time for Distance:</h2>
                 <!-- Input fields for velocity and distance -->
-
-                    <div class="input-container">
-
-                        <label for="velocity-field">
-                            Velocity:
-                        </label>
-                        <input id="velocity-field" type="text">
-                        <span class="velocity">v</span>
-                    </div>
-                    <div class="input-container">
-
-                        <label for="distance-km-field">
-                            Distance in Km:
-                        </label>
-                        <input id="distance-km-field" type="text" aria-label="Distance in km">
-                        <span class="distance">s</span>
-                    </div>
+                <div class="input-container">
+                    <label for="velocity-field">
+                        Velocity:
+                    </label>
+                    <input id="velocity-field" type="text">
+                    <span class="velocity">v</span>
+                </div>
+                <div class="input-container">
+                    <label for="distance-km-field">
+                        Distance in Km:
+                    </label>
+                    <input id="distance-km-field" type="text" aria-label="Distance in km">
+                    <span class="distance">s</span>
+                </div>
 
                 <!-- Output fields for time and distance conversion -->
                 <div>
-
                     <div class="output-container">
                         <label for="time-field">
                             Time:
@@ -100,7 +96,6 @@
                         <span class="time">t</span>
                     </div>
                     <div class="output-container">
-
                         <label for="distance-mi-field">
                             Distance in Mi:
                         </label>
@@ -118,7 +113,6 @@
                 <!-- Input fields for distance and consumption -->
                 <div>
                     <div class="input-container">
-
                         <label for="distance-fuel-field">
                             Travel Distance:
                         </label>
@@ -158,36 +152,33 @@
             <div class="container">
                 <h2>CO₂ Footprint:</h2>
                 <!-- Input fields for transportation mode and fuel type -->
-                <div>
-                    <div class="input-container">
-                        <label for="transportation-mode">
-                            Transportation Mode:
-                        </label>
-                        <select id="transportation-mode">
-                            <option value="car">Car</option>
-                            <option value="bus">Bus</option>
-                            <option value="train">Train</option>
-                        </select>
-                    </div>
-                    <div class="input-container">
+                <div class="input-container">
+                    <label for="transportation-mode">
+                        Transportation Mode:
+                    </label>
+                    <select id="transportation-mode">
+                        <option value="car">Car</option>
+                        <option value="bus">Bus</option>
+                        <option value="train">Train</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="fuel-type">
+                        Fuel Type:
+                    </label>
+                    <select id="fuel-type">
+                        <option value="gasoline">Gasoline</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="electricity">Electricity</option>
+                    </select>
+                </div>
+                <div class="input-container">
 
-                        <label for="fuel-type">
-                            Fuel Type:
-                        </label>
-                        <select id="fuel-type">
-                            <option value="gasoline">Gasoline</option>
-                            <option value="diesel">Diesel</option>
-                            <option value="electricity">Electricity</option>
-                        </select>
-                    </div>
-                    <div class="input-container">
-
-                        <label for="distance-co2-footprint-field">
-                            Travel Distance:
-                        </label>
-                        <input id="distance-co2-footprint-field" type="text">
-                        <span class="co2-footprint">d</span>
-                    </div>
+                    <label for="distance-co2-footprint-field">
+                        Travel Distance:
+                    </label>
+                    <input id="distance-co2-footprint-field" type="text">
+                    <span class="co2-footprint">d</span>
                 </div>
                 <!-- Output field for displaying CO₂ footprint -->
                 <div>
