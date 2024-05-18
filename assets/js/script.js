@@ -65,7 +65,18 @@ function calculateTimeAndDistance() {
     const distanceMiField = document.getElementById('distance-mi-field');
 
     // Get the values from the input fields and replace "." with "," for German users
-
+    const velocity = parseFloat(
+        formatNumberForLocale(document.getElementById("velocity-field").value)
+    );
+    const distancedKm = parseFloat(
+        formatNumberForLocale(document.getElementById("distance-km-field").value)
+    );
+    const travelTime = parseFloat(
+        formatNumberForLocale(document.getElementById("time-field").value)
+    );
+    const distanceMi = parseFloat(
+        formatNumberForLocale(document.getElementById("distance-mi-field").value)
+    );
 
 
     // Calculate time if velocity and distance in km are given
