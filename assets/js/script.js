@@ -100,6 +100,13 @@ function calculateTimeAndDistance() {
 
         timeField.value = formattedTime;
         distanceMiField.value = calculatedDistanceMi.toFixed(2) + " miles";
+    } else if (!isNaN(travelTime) && travelTime > 0 && !isNaN(distanceKm)) {
+        // Calculate velocity if time and distance in km are given
+        const calculatedVelocity = distanceKm / travelTime;
+        const calculatedDistanceMi = distanceKm * 0.621371;
+
+        velocityField.value = calculatedVelocity.toFixed(2) + " km/h";
+        distanceMiField.value = calculatedDistanceMi.toFixed(2) + " miles";
     }
 
     // Calculate velocity if time and distance in km are given
