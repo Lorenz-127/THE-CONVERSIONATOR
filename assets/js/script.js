@@ -140,6 +140,22 @@ function calculateTimeAndDistance() {
 
         timeField.value = formattedTime;
         distanceKmField.value = calculatedDistanceKm.toFixed(2) + " km";
+    } else if (!isNaN(distanceMi) && distanceMi > 0 && !isNaN(velocity)) {
+        // Calculate distance in km if velocity and distance in miles are given
+        const calculatedTime = distanceMi / velocity;
+        const calculatedDistanceKm = distanceMi / 0.621371;
+
+        // Calculate remaining minutes
+        const remainingMinutes = Math.round(
+            (calculatedTime - Math.floor(calculatedTime)) * 60
+        );
+
+        // Format time in hours and minutes
+        const formattedTime =
+            Math.floor(calculatedTime) + "h " + remainingMinutes + "min";
+
+        timeField.value = formattedTime;
+        distanceKmField.value = calculatedDistanceKm.toFixed(2) + " km";
     }
 
     // Calculate velocity if time and distance in km are given
