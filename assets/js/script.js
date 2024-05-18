@@ -18,7 +18,9 @@ document.getElementById("curtain-close").addEventListener("click", () => {
 document.addEventListener("input", function (event) {
     if (
         event.target.id === "velocity-field" ||
-        event.target.id === "distance-km-field"
+        event.target.id === "distance-km-field" ||
+        event.target.id === "time-field" ||
+        event.target.id === "distance-mi-field"
     ) {
         // Format the input value before calculating time and distance
         event.target.value = formatNumberForLocale(event.target.value);
