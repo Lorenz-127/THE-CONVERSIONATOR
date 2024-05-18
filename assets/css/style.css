@@ -52,7 +52,6 @@ header {
     position: fixed;
     height: auto;
     background-color: var(--clr-background-light);
-    max-width: 900px;
     padding-top: 1rem;
     justify-content: center;
     align-items: center;
@@ -325,12 +324,12 @@ i:hover {
 
 /* fuel consumption section */
 #fuel-consumption {
-    display: none;
+    display: block;
 }
 
 /* co2 footprint section */
 #co2-footprint {
-    display: none;
+    display: block;
 }
 
 /* instructions section */
@@ -340,10 +339,23 @@ i:hover {
 
 /* MARK Responsive Designs */
 
-/* For tablets  >= 480px */
-
-
 
 /* For tablets  >= 768px */
 
+
+
 /* For laptops >= 992px */
+@media (min-width: 992px) {
+
+
+    .container {
+        width: 40vw;
+    }
+
+    .section-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+}
