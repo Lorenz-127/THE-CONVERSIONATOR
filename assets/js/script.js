@@ -51,7 +51,7 @@ document.getElementById('velocity-field').addEventListener('input', calculate);
 document.getElementById('distance-km-field').addEventListener('input', calculate);
 document.getElementById('time-field').addEventListener('input', calculate);
 document.getElementById('distance-mi-field').addEventListener('input', calculate);
-document.getElementById('reset-btn').addEventListener('click', resetFields);
+document.getElementById('reset-btn-time').addEventListener('click', resetFields);
 
 /**
  * Calculate Time and Distance, Convert distance to miles,
