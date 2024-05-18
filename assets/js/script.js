@@ -162,26 +162,6 @@ function calculateTimeAndDistance() {
     }
 }
 
-    // Calculate velocity if time and distance in km are given
-
-    // Calculate distance in km if time and velocity are given
-
-    // Calculate velocity if time and distance in miles are given
-
-    // Calculate time if velocity and distance in miles are given
-
-    // Calculate distance in km if velocity and distance in miles are given
-
-    // Validate input
-
-    // Convert distance to miles (1 km = 0.621371 miles)
-
-    // Calculate remaining minutes
-
-    // Format time in hours and minutes
-
-    // Update output fields
-
 // Function to reset all input fields
 function resetTravelTimeFields() {
     document.getElementById('velocity-field').value = '';
