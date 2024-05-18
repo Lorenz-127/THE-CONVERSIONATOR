@@ -64,17 +64,17 @@ document.getElementById('reset-btn-time').addEventListener('click', resetTravelT
  * Calculate the time required, Format time in hours and minutes
  */
 function calculateTimeAndDistance() {
-    // Retrieve DOM elements for user input and output fields
-    const velocityField = document.getElementById('velocity-field');
-    const distanceKmField = document.getElementById('distance-km-field');
-    const timeField = document.getElementById('time-field');
-    const distanceMiField = document.getElementById('distance-mi-field');
+    // Retrieve DOM elements from input fields
+    const velocityField = document.getElementById("velocity-field");
+    const distanceKmField = document.getElementById("distance-km-field");
+    const timeField = document.getElementById("time-field");
+    const distanceMiField = document.getElementById("distance-mi-field");
 
-    // Get the values from the input fields and replace "." with "," for German users
+    // Get the values from the input fields and replace ","  with "." for German users
     const velocity = parseFloat(
         formatNumberForLocale(document.getElementById("velocity-field").value)
     );
-    const distancedKm = parseFloat(
+    const distanceKm = parseFloat(
         formatNumberForLocale(document.getElementById("distance-km-field").value)
     );
     const travelTime = parseFloat(
@@ -84,8 +84,23 @@ function calculateTimeAndDistance() {
         formatNumberForLocale(document.getElementById("distance-mi-field").value)
     );
 
+    if (!isNaN(velocity) && velocity > 0 && !isNaN(distanceKm)) {
+        // Calculate time if velocity and distance in km are given
+        const calculatedTime = distanceKm / velocity;
+        const calculatedDistanceMi = distanceKm * 0.621371;
 
-    // Calculate time if velocity and distance in km are given
+        // Calculate remaining minutes
+        const remainingMinutes = Math.round(
+            (calculatedTime - Math.floor(calculatedTime)) * 60
+        );
+
+        // Format time in hours and minutes
+        const formattedTime =
+            Math.floor(calculatedTime) + "h " + remainingMinutes + "min";
+
+        timeField.value = formattedTime;
+        distanceMiField.value = calculatedDistanceMi.toFixed(2) + " miles";
+    }
 
     // Calculate velocity if time and distance in km are given
 
