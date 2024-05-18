@@ -14,6 +14,12 @@ document.getElementById("curtain-close").addEventListener("click", () => {
     document.getElementById("blur-content").classList.remove("active");
 });
 
+// Add global function to replace "," with "." for German users
+function formatNumberForLocale(number) {
+    // Replace "," with "."
+    return number.replace(",", ".");
+}
+
 // Add event listener to initialize calculations when input fields change
 document.addEventListener("input", function (event) {
     if (
