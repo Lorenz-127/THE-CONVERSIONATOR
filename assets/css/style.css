@@ -324,12 +324,17 @@ i:hover {
 
 /* fuel consumption section */
 #fuel-consumption {
-    display: block;
+    display: none;
+}
+
+/* route planing */
+#route-planning {
+    display: none;
 }
 
 /* co2 footprint section */
 #co2-footprint {
-    display: block;
+    display: none;
 }
 
 /* instructions section */
