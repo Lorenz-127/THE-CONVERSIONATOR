@@ -156,7 +156,11 @@ function calculateTimeAndDistance() {
 
         timeField.value = formattedTime;
         distanceKmField.value = calculatedDistanceKm.toFixed(2) + " km";
+    } else {
+        // Validate input
+        alert("Please enter valid numerical values for at least two fields.");
     }
+}
 
     // Calculate velocity if time and distance in km are given
 
