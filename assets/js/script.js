@@ -46,6 +46,13 @@ function formatNumberForLocale(number) {
     return number.replace(",", ".");
 }
 
+// Add event listeners for calculateTimeAndDistance function
+document.getElementById('velocity-field').addEventListener('input', calculate);
+document.getElementById('distance-km-field').addEventListener('input', calculate);
+document.getElementById('time-field').addEventListener('input', calculate);
+document.getElementById('distance-mi-field').addEventListener('input', calculate);
+document.getElementById('reset-btn').addEventListener('click', resetFields);
+
 /**
  * Calculate Time and Distance, Convert distance to miles,
  * Calculate the time required, Format time in hours and minutes
