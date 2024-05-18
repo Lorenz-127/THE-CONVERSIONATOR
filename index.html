@@ -53,20 +53,20 @@
                 <li><a href="#">Settings</a></li>
             </ul>
         </nav>
-
-        <!-- Home / Welcome Section -->
-        <section id="home">
-            <div class="container">
-                <ul class="home-nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Travel Time</a></li>
-                    <li><a href="#">Travel Cost</a></li>
-                    <li><a href="#">CO₂ Footprint</a></li>
-                    <li><a href="#">Instructions</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </div>
-        </section>
+        <div class="section-wrapper">
+            <!-- Home / Welcome Section -->
+            <section id="home">
+                <div class="container">
+                    <ul class="home-nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Travel Time</a></li>
+                        <li><a href="#">Travel Cost</a></li>
+                        <li><a href="#">CO₂ Footprint</a></li>
+                        <li><a href="#">Instructions</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </section>
 
         <!-- Velocity, Distance, and Time calculation section -->
         <section id="vst">
@@ -144,51 +144,51 @@
             </div>
         </section>
 
-        <!-- CO2 Footprint calculation section -->
-        <section id="co2-footprint">
-            <div class="container">
-                <div class="flex-center">
-                    <h2>CO₂ Footprint:</h2>
-                    <!-- Button to reset input fileds -->
-                    <i class="fa-solid fa-delete-left" id="reset-btn-footprint"></i>
+            <!-- CO2 Footprint calculation section -->
+            <section id="co2-footprint">
+                <div class="container">
+                    <div class="flex-center">
+                        <h2>CO₂ Footprint:</h2>
+                        <!-- Button to reset input fileds -->
+                        <i class="fa-solid fa-delete-left" id="reset-btn-footprint"></i>
+                    </div>
+                    <!-- Input fields for transportation mode and fuel type -->
+                    <div class="input-container">
+                        <label for="transportation-mode">
+                            Transportation Mode:
+                        </label>
+                        <select id="transportation-mode" class="input-field">
+                            <option value="train">Train</option>
+                            <option value="bus">Bus</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label for="fuel-type">
+                            Fuel Type:
+                        </label>
+                        <select id="fuel-type" class="input-field">
+                            <option value="electricity">Electricity</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="gasoline">Gasoline</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label for="distance-co2-footprint-field">
+                            Travel Distance:
+                        </label>
+                        <input id="distance-co2-footprint-field" class="input-field" type="text">
+                    </div>
+                    <!-- Output field for displaying CO₂ footprint -->
+                    <div class="output-container">
+                        <label for="co2-footprint-field">
+                            CO₂ Footprint:
+                        </label>
+                        <input id="co2-footprint-field" class="input-field" type="text" readonly>
+                    </div>
                 </div>
-                <!-- Input fields for transportation mode and fuel type -->
-                <div class="input-container">
-                    <label for="transportation-mode">
-                        Transportation Mode:
-                    </label>
-                    <select id="transportation-mode" class="input-field">
-                        <option value="train">Train</option>
-                        <option value="bus">Bus</option>
-                        <option value="car">Car</option>
-                    </select>
-                </div>
-                <div class="input-container">
-                    <label for="fuel-type">
-                        Fuel Type:
-                    </label>
-                    <select id="fuel-type" class="input-field">
-                        <option value="electricity">Electricity</option>
-                        <option value="diesel">Diesel</option>
-                        <option value="gasoline">Gasoline</option>
-                    </select>
-                </div>
-                <div class="input-container">
-                    <label for="distance-co2-footprint-field">
-                        Travel Distance:
-                    </label>
-                    <input id="distance-co2-footprint-field" class="input-field" type="text">
-                </div>
-                <!-- Output field for displaying CO₂ footprint -->
-                <div class="output-container">
-                    <label for="co2-footprint-field">
-                        CO₂ Footprint:
-                    </label>
-                    <input id="co2-footprint-field" class="input-field" type="text" readonly>
-                </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
         <section id="instructions">
             <div class="instructions-container">
                 <div class="instructions">
