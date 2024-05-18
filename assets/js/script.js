@@ -47,11 +47,11 @@ function formatNumberForLocale(number) {
 }
 
 // Add event listeners for calculateTimeAndDistance function
-document.getElementById('velocity-field').addEventListener('input', calculate);
-document.getElementById('distance-km-field').addEventListener('input', calculate);
-document.getElementById('time-field').addEventListener('input', calculate);
-document.getElementById('distance-mi-field').addEventListener('input', calculate);
-document.getElementById('reset-btn-time').addEventListener('click', resetFields);
+document.getElementById('velocity-field').addEventListener('input', calculateTimeAndDistance);
+document.getElementById('distance-km-field').addEventListener('input', calculateTimeAndDistance);
+document.getElementById('time-field').addEventListener('input', calculateTimeAndDistance);
+document.getElementById('distance-mi-field').addEventListener('input', calculateTimeAndDistance);
+document.getElementById('reset-btn-time').addEventListener('click', resetTravleTimeFields);
 
 /**
  * Calculate Time and Distance, Convert distance to miles,
