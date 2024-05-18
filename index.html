@@ -141,8 +141,60 @@
                         <input id="cost-fuel-field" class="input-field" type="text">
                     </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+
+            <!-- Travel Distance and Route Planning section -->
+            <section id="route-planning">
+                <div class="container">
+                    <div class="flex-center">
+                        <h2>Travel Distance and Route Planning:</h2>
+                        <!-- Button to reset input fields -->
+                        <i class="fa-solid fa-delete-left" id="reset-btn-route"></i>
+                    </div>
+                    <!-- Input fields for origin and destination coordinates -->
+                    <div class="input-container">
+                        <label for="origin-lat-field">Origin Latitude:</label>
+                        <input id="origin-lat-field" class="input-field" type="text" aria-label="Origin latitude">
+                    </div>
+                    <div class="input-container">
+                        <label for="origin-lon-field">Origin Longitude:</label>
+                        <input id="origin-lon-field" class="input-field" type="text" aria-label="Origin longitude">
+                    </div>
+                    <div class="input-container">
+                        <label for="destination-lat-field">Destination Latitude:</label>
+                        <input id="destination-lat-field" class="input-field" type="text"
+                            aria-label="Destination latitude">
+                    </div>
+                    <div class="input-container">
+                        <label for="destination-lon-field">Destination Longitude:</label>
+                        <input id="destination-lon-field" class="input-field" type="text"
+                            aria-label="Destination longitude">
+                    </div>
+
+                    <!-- Dropdown for selecting mode of transportation -->
+                    <div class="input-container">
+                        <label for="transport-mode-field">Mode of Transportation:</label>
+                        <select id="transport-mode-field" class="input-field">
+                            <option value="car">Car</option>
+                            <option value="bicycle">Bicycle</option>
+                            <option value="walking">Walking</option>
+                        </select>
+                    </div>
+
+                    <!-- Output fields for distance and estimated travel time -->
+                    <div class="output-container">
+                        <label for="route-distance-field">Distance (km):</label>
+                        <input id="route-distance-field" class="input-field" type="text" aria-label="Distance in km"
+                            readonly>
+                    </div>
+                    <div class="output-container">
+                        <label for="estimated-time-field">Estimated Travel Time:</label>
+                        <input id="estimated-time-field" class="input-field" type="text"
+                            aria-label="Estimated travel time" readonly>
+                    </div>
+                </div>
+            </section>
 
             <!-- CO2 Footprint calculation section -->
             <section id="co2-footprint">
