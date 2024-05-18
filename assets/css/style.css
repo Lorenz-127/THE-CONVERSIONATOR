@@ -320,7 +320,7 @@ i:hover {
 
 /* vst section */
 #vst {
-    display: none;
+    display: block;
 }
 
 /* fuel consumption section */
@@ -335,7 +335,7 @@ i:hover {
 
 /* instructions section */
 #instructions {
-    display: block;
+    display: none;
 }
 
 /* MARK Responsive Designs */
