@@ -14,6 +14,26 @@ document.getElementById("curtain-close").addEventListener("click", () => {
     document.getElementById("blur-content").classList.remove("active");
 });
 
+// Logic for the navigation Links overlay-nav and home-nav
+
+// Defaut section is Instructions.
+
+// Select all the navigation links.
+
+// Add a click event listener to each link.
+
+// In the event handler, prevent the default action of the link.
+
+// Extract the href attribute of the clicked link.
+
+// Use the href attribute to select the corresponding section.
+
+// Hide all sections.
+
+// Show the selected section.
+
+
+
 // Add global function to replace "," with "." for German users
 function formatNumberForLocale(number) {
     // Replace "," with "."
