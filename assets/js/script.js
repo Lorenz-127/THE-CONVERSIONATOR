@@ -58,6 +58,12 @@ document.getElementById('reset-btn-time').addEventListener('click', resetFields)
  * Calculate the time required, Format time in hours and minutes
  */
 function calculateTimeAndDistance() {
+    // Retrieve DOM elements for user input and output fields
+    const velocityField = document.getElementById('velocity-field');
+    const distanceKmField = document.getElementById('distance-km-field');
+    const timeField = document.getElementById('time-field');
+    const distanceMiField = document.getElementById('distance-mi-field');
+
     // Get the values from the input fields and replace "." with "," for German users
 
 
