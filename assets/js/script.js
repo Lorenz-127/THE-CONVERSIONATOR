@@ -57,7 +57,7 @@ document.getElementById('velocity-field').addEventListener('input', calculateTim
 document.getElementById('distance-km-field').addEventListener('input', calculateTimeAndDistance);
 document.getElementById('time-field').addEventListener('input', calculateTimeAndDistance);
 document.getElementById('distance-mi-field').addEventListener('input', calculateTimeAndDistance);
-document.getElementById('reset-btn-time').addEventListener('click', resetTravleTimeFields);
+document.getElementById('reset-btn-time').addEventListener('click', resetTravelTimeFields);
 
 /**
  * Calculate Time and Distance, Convert distance to miles,
@@ -107,5 +107,10 @@ function calculateTimeAndDistance() {
 
     // Update output fields
 
-    // reset all fields
+// Function to reset all input fields
+function resetTravelTimeFields() {
+    document.getElementById('velocity-field').value = '';
+    document.getElementById('distance-km-field').value = '';
+    document.getElementById('time-field').value = '';
+    document.getElementById('distance-mi-field').value = '';
 }
