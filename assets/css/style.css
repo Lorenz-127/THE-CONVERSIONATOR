@@ -144,7 +144,7 @@ input[type=number] {
 }
 
 .grid-wrapper {
-    margin-left: 2rem;
+    margin-left: 1rem;
     justify-items: center;
     align-items: center;
 }
@@ -208,7 +208,7 @@ option {
     display: grid;
     grid-template-columns: 120px 50px 80px;
     margin-bottom: 0.5rem;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: left;
     justify-content: center;
     align-items: center;
@@ -246,7 +246,7 @@ option {
 .input-field {
     justify-self: center;
     align-self: center;
-    width: 60px;
+    width: 80px;
     height: 30px;
     border-radius: 0.25rem;
     font-family: var(--font-text);
