@@ -14,6 +14,11 @@ document.getElementById("curtain-close").addEventListener("click", () => {
     document.getElementById("blur-content").classList.remove("active");
 });
 
+// Add event listener all navigation links Class "overlay-nav-links"
+// const navLinks = document.querySelectorAll('.overlay-nav-links a');
+
+
+
 // Logic for the navigation Links overlay-nav and home-nav
 
 // Defaut section is Instructions.
@@ -42,35 +47,30 @@ function formatNumberForLocale(number) {
 
 // Add event listener to initialize calculations when input fields change
 document.addEventListener("input", function (event) {
+    const eventId = event.target.id
     if (
-        event.target.id === "velocity-field" ||
-        event.target.id === "distance-km-field" ||
-        event.target.id === "time-field" ||
-        event.target.id === "distance-mi-field"
+        eventId === "velocity-field" ||
+        eventId === "distance-km-field" ||
+        eventId === "time-field" ||
+        eventId === "distance-mi-field"
     ) {
         // Format the input value before calculating time and distance
         event.target.value = formatNumberForLocale(event.target.value);
         calculateTimeAndDistance();
     } else if (
-        event.target.id === "distance-fuel-field" ||
-        event.target.id === "distance-consumption-field" ||
-        event.target.id === "price-per-unit-field"
+        eventId === "distance-fuel-field" ||
+        eventId === "distance-consumption-field" ||
+        eventId === "price-per-unit-field"
     ) {
         calculateFuelCost();
     } else if (
-        event.target.id === "transportation-mode" ||
-        event.target.id === "fuel-type" ||
-        event.target.id === "distance-co2-footprint-field"
+        eventId === "transportation-mode" ||
+        eventId === "fuel-type" ||
+        eventId === "distance-co2-footprint-field"
     ) {
         calculateCO2Footprint();
     }
 });
-
-// Add global function to replace "," with "." for German users
-function formatNumberForLocale(number) {
-    // Replace "," with "."
-    return number.replace(",", ".");
-}
 
 // Add event listeners for calculateTimeAndDistance function
 document.getElementById('velocity-field').addEventListener('input', calculateTimeAndDistance);
