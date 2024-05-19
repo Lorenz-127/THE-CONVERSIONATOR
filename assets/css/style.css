@@ -344,27 +344,27 @@ option {
 
 /* vst section */
 #vst {
-    display: none;
+    display: grid;
 }
 
 /* fuel consumption section */
 #fuel-consumption {
-    display: none;
+    display: block;
 }
 
 /* currency calculator section*/
 #currency-calculator {
-    display: none;
+    display: block;
 }
 
 /* co2 footprint section */
 #co2-footprint {
-    display: none;
+    display: block;
 }
 
 /* instructions section */
 #instructions {
-    display: block;
+    display: none;
 }
 
 /* MARK Responsive Designs */
