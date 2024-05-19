@@ -34,7 +34,7 @@
     --font-text: "Lato", sans-serif;
 }
 
-/* Global Styles */
+/* MARK: Global Styles */
 html {
     font-size: 16pt;
     color: var(--text-color);
@@ -99,12 +99,58 @@ footer {
     width: 100%;
 }
 
-/* Utilities */
+/* MARK: Utilities */
+
+/* Icons and Buttons */
+i {
+    cursor: pointer;
+    transition: 200ms ease;
+    color: var(--clr-text-light);
+}
+
+i:hover {
+    transform: scale(1.7);
+    border-radius: 2px;
+}
+
+.fa-delete-left {
+    padding-right: 1rem;
+}
+
+.fa-delete-left:hover {
+    color: var(--clr-danger-light);
+}
+
+/* Hide Arrows From Input Number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* flex utilities */
 .flex-center {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-wrapper {
+    margin-left: 2.5rem;
+    justify-items: center;
     align-items: center;
 }
+
+
+/* MARK: main content */
 
 /* Containers, labels, and inputs  */
 .container {
@@ -119,19 +165,30 @@ footer {
 
 .container h2 {
     margin: 0.5rem 0.5rem 0.5rem;
+    text-align: center;
 }
 
+.units,
 label {
     font-size: large;
     font-weight: 600;
-    margin-left: 0.5rem;
+}
+
+option {
+    font-family: var(--font-text);
+    font-size: medium;
+    font-weight: 600;
 }
 
 .output-container,
 .input-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 150px 90px 70px;
+    margin-bottom: 0.5rem;
     gap: 0.5rem;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
 }
 
 .instructions-container {
@@ -169,12 +226,11 @@ label {
 
 }
 
-
 .input-field {
-    width: 90%;
+    justify-self: center;
+    align-self: center;
+    width: 80px;
     height: 30px;
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
     border-radius: 0.25rem;
     font-family: var(--font-text);
     font-size: medium;
@@ -184,32 +240,6 @@ label {
     caret-color: var(--clr-text-light);
     resize: none;
     overflow: auto;
-}
-
-option {
-    font-family: var(--font-text);
-    font-size: medium;
-    font-weight: 600;
-}
-
-/* Icons and Buttons */
-i {
-    cursor: pointer;
-    transition: 200ms ease;
-    color: var(--clr-text-light);
-}
-
-i:hover {
-    transform: scale(1.7);
-    border-radius: 2px;
-}
-
-.fa-delete-left {
-    padding-right: 1rem;
-}
-
-.fa-delete-left:hover {
-    color: var(--clr-danger-light);
 }
 
 /* Header */
