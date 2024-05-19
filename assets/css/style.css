@@ -312,11 +312,6 @@ i:hover {
     background-color: var(--clr-secondary-light);
 }
 
-/* home section */
-#home {
-    display: none;
-}
-
 /* vst section */
 #vst {
     display: block;
