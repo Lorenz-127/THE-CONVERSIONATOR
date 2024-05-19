@@ -64,31 +64,38 @@
                         <i class="fa-solid fa-delete-left" id="reset-btn-time"></i>
                     </div>
                     <!-- Input fields for velocity and distance -->
-                    <div class="input-container">
-                        <label for="velocity-field">
-                            Velocity:
-                        </label>
-                        <input id="velocity-field" class="input-field" type="text" aria-label="Velocity in km/h">
-                    </div>
-                    <div class="input-container">
-                        <label for="distance-km-field">
-                            Distance in Km:
-                        </label>
-                        <input id="distance-km-field" class="input-field" type="text" aria-label="Distance in km">
-                    </div>
+                    <div class="grid-wrapper">
+                        <div class="input-container">
+                            <label for="velocity-field">
+                                Velocity:
+                            </label>
+                            <input id="velocity-field" class="input-field" type="number" aria-label="Velocity in km/h"
+                                value="0">
+                            <span class="units">km/h</span>
+                        </div>
+                        <div class="input-container">
+                            <label for="distance-km-field">
+                                Distance in Km:
+                            </label>
+                            <input id="distance-km-field" class="input-field" type="number" aria-label="Distance in km"
+                                value="0"><span class="units">km</span>
+                        </div>
 
-                    <!-- Output fields for time and distance conversion -->
-                    <div class="output-container">
-                        <label for="time-field">
-                            Time:
-                        </label>
-                        <input id="time-field" class="input-field" type="text" aria-label="Time in h and min">
-                    </div>
-                    <div class="output-container">
-                        <label for="distance-mi-field">
-                            Distance in Mi:
-                        </label>
-                        <input id="distance-mi-field" class="input-field" type="text" aria-label="Distance in mi">
+                        <!-- Output fields for time and distance conversion -->
+                        <div class="output-container">
+                            <label for="time-field">
+                                Time:
+                            </label>
+                            <input id="time-field" class="input-field" type="number" aria-label="Time in h and min"
+                                value="0"><span class="units">h</span>
+                        </div>
+                        <div class="output-container">
+                            <label for="distance-mi-field">
+                                Distance in Mi:
+                            </label>
+                            <input id="distance-mi-field" class="input-field" type="number" aria-label="Distance in mi"
+                                value="0"><span class="units">mi</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -102,32 +109,37 @@
                         <i class="fa-solid fa-delete-left" id="reset-btn-cost"></i>
                     </div>
                     <!-- Input fields for distance and consumption -->
-                    <div class="input-container">
-                        <label for="distance-fuel-field">
-                            Travel Distance:
-                        </label>
-                        <input id="distance-fuel-field" class="input-field" type="text">
+                    <div class="grid-wrapper">
+                        <div class="input-container">
+                            <label for="distance-fuel-field">
+                                Travel Distance:
+                            </label>
+                            <input id="distance-fuel-field" class="input-field" type="text">
+                            <span class="units">km/mi</span>
+                        </div>
+                        <div class="input-container">
+                            <label for="distance-consumption-field">
+                                Fuel Consumption:
+                            </label>
+                            <input id="distance-consumption-field" class="input-field" type="text">
+                            <span class="units">l/100km</span>
+                        </div>
+                        <!-- Output fields for price per unit and cost -->
+                        <div class="output-container">
+                            <label for="price-per-unit-field">
+                                Price per unit of fuel:
+                            </label>
+                            <input id="price-per-unit-field" class="input-field" type="text">
+                            <span class="units">€-$-£/l</span>
+                        </div>
+                        <div class="output-container">
+                            <label for="cost-fuel-field">
+                                Cost:
+                            </label>
+                            <input id="cost-fuel-field" class="input-field" type="text">
+                            <span class="units">€/$/£</span>
+                        </div>
                     </div>
-                    <div class="input-container">
-                        <label for="distance-consumption-field">
-                            Fuel Consumption:
-                        </label>
-                        <input id="distance-consumption-field" class="input-field" type="text">
-                    </div>
-                    <!-- Output fields for price per unit and cost -->
-                    <div class="output-container">
-                        <label for="price-per-unit-field">
-                            Price per unit of fuel:
-                        </label>
-                        <input id="price-per-unit-field" class="input-field" type="text">
-                    </div>
-                    <div class="output-container">
-                        <label for="cost-fuel-field">
-                            Cost:
-                        </label>
-                        <input id="cost-fuel-field" class="input-field" type="text">
-                    </div>
-
                 </div>
             </section>
 
@@ -140,40 +152,44 @@
                         <i class="fa-solid fa-delete-left" id="reset-btn-footprint"></i>
                     </div>
                     <!-- Input fields for transportation mode and fuel type -->
-                    <div class="curency-container">
-                        <div class="input-container">
-                            <label for="curency-origin">
-                                Curency origin:
-                            </label>
-                            <select id="curency-origin" class="input-field">
-                                <option value="EUR">EUR</option>
-                                <option value="USD">USD</option>
-                                <option value="GBP">GBP</option>
-                            </select>
+                    <div class="grid-wrapper">
+                        <div class="curency-container">
+                            <div class="input-container">
+                                <label for="curency-origin">
+                                    Curency origin:
+                                </label>
+                                <select id="curency-origin" class="input-field">
+                                    <option value="EUR">EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                </select>
+                            </div>
+                            <div class="input-container">
+                                <label for="curency-origin-field">
+                                    Ammount:
+                                </label>
+                                <input id="curency-origin-field" class="input-field" type="text">
+                                <span class="units">€/$/£</span>
+                            </div>
                         </div>
-                        <div class="input-container">
-                            <label for="curency-origin-field">
-                                Ammount:
-                            </label>
-                            <input id="curency-origin-field" class="input-field" type="text">
-                        </div>
-                    </div>
-                    <div class="curency-container">
-                        <div class="input-container">
-                            <label for="curency-destination">
-                                Curency destination:
-                            </label>
-                            <select id="curency-destination" class="input-field">
-                                <option value="GBP">GBP</option>
-                                <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                            </select>
-                        </div>
-                        <div class="input-container">
-                            <label for="curency-destination-field">
-                                Ammount:
-                            </label>
-                            <input id="curency-destination-field" class="input-field" type="text">
+                        <div class="curency-container">
+                            <div class="input-container">
+                                <label for="curency-destination">
+                                    Curency destination:
+                                </label>
+                                <select id="curency-destination" class="input-field">
+                                    <option value="GBP">GBP</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                </select>
+                            </div>
+                            <div class="input-container">
+                                <label for="curency-destination-field">
+                                    Ammount:
+                                </label>
+                                <input id="curency-destination-field" class="input-field" type="text">
+                                <span class="units">£/$/€</span>
+                            </div>
                         </div>
                     </div>
             </section>
@@ -187,38 +203,42 @@
                         <i class="fa-solid fa-delete-left" id="reset-btn-footprint"></i>
                     </div>
                     <!-- Input fields for transportation mode and fuel type -->
-                    <div class="input-container">
-                        <label for="transportation-mode">
-                            Transportation Mode:
-                        </label>
-                        <select id="transportation-mode" class="input-field">
-                            <option value="train">Train</option>
-                            <option value="bus">Bus</option>
-                            <option value="car">Car</option>
-                        </select>
-                    </div>
-                    <div class="input-container">
-                        <label for="fuel-type">
-                            Fuel Type:
-                        </label>
-                        <select id="fuel-type" class="input-field">
-                            <option value="electricity">Electricity</option>
-                            <option value="diesel">Diesel</option>
-                            <option value="gasoline">Gasoline</option>
-                        </select>
-                    </div>
-                    <div class="input-container">
-                        <label for="distance-co2-footprint-field">
-                            Travel Distance:
-                        </label>
-                        <input id="distance-co2-footprint-field" class="input-field" type="text">
-                    </div>
-                    <!-- Output field for displaying CO₂ footprint -->
-                    <div class="output-container">
-                        <label for="co2-footprint-field">
-                            CO₂ Footprint:
-                        </label>
-                        <input id="co2-footprint-field" class="input-field" type="text" readonly>
+                    <div class="grid-wrapper">
+                        <div class="input-container">
+                            <label for="transportation-mode">
+                                Transportation Mode:
+                            </label>
+                            <select id="transportation-mode" class="input-field">
+                                <option value="train">Train</option>
+                                <option value="bus">Bus</option>
+                                <option value="car">Car</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <label for="fuel-type">
+                                Fuel Type:
+                            </label>
+                            <select id="fuel-type" class="input-field">
+                                <option value="electricity">Elec.</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="gasoline">Petrol</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <label for="distance-co2-footprint-field">
+                                Travel Distance:
+                            </label>
+                            <input id="distance-co2-footprint-field" class="input-field" type="text">
+                            <span class="units">km/mi</span>
+                        </div>
+                        <!-- Output field for displaying CO₂ footprint -->
+                        <div class="output-container">
+                            <label for="co2-footprint-field">
+                                CO₂ Footprint:
+                            </label>
+                            <input id="co2-footprint-field" class="input-field" type="text" readonly>
+                            <span class="units">t-CO₂</span>
+                        </div>
                     </div>
                 </div>
             </section>
