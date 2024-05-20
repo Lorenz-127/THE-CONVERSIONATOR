@@ -1,11 +1,13 @@
-// Add event listener to element with ID "curtain-open"
-document.getElementById("curtain-open").addEventListener("click", () => {
-    // Display the element with ID "curtain-menu" when clicked
-    document.getElementById("curtain-menu").style.display = "block";
-    // set blur effect to content behind curtain menu visible
-    document.getElementById("blur-content").classList.add("active");
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Add event listener to element with ID "curtain-open"
+    document.getElementById("curtain-open").addEventListener("click", () => {
+        // Display the element with ID "curtain-menu" when clicked
+        document.getElementById("curtain-menu").style.display = "block";
+        // set blur effect to content behind curtain menu visible
+        document.getElementById("blur-content").classList.add("active");
+    });
 });
-
 // Add event listener to element with ID "curtain-close"
 document.getElementById("curtain-close").addEventListener("click", () => {
     // Hide the element with ID "curtain-menu" when clicked
