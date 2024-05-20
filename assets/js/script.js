@@ -16,7 +16,7 @@ document.getElementById("curtain-close").addEventListener("click", () => {
     document.getElementById("blur-content").classList.remove("active");
 });
 
-// Select all navigation links
+// Select all navigation links in overlay and instruction section
 const navLinks = document.querySelectorAll(
     ".overlay-nav-links a, .instructions-wrapper a"
 );
@@ -37,22 +37,29 @@ function showSection(id) {
     }
 }
 
-// Add click event listener to each link
+// Add click event listener to each overlay-nav-link
 navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
-        // Prevent default action
-        event.preventDefault();
+        // Check clicked link href is "index.html"
+        if (this.getAttribute("href") === "index.html" || this.getAttribute("href") === "#instructions")
+            // If it is, reload page for index.html or do nothing for #instructions
+            if (this.getAttribute("href") === "index.html") {
+                location.reload();
+            } else {
+                // Prevent default action
+                event.preventDefault();
 
-        // Hide all sections
-        hideAllSections();
+                // Hide all sections
+                hideAllSections();
 
-        // Show the selected section
-        showSection(this.getAttribute("href"));
+                // Show the selected section
+                showSection(this.getAttribute("href"));
 
-        // Hide the curtain menu
-        document.getElementById("curtain-menu").style.display = "none";
-        // reset blur effect to content behind curtain menu to hidden
-        document.getElementById("blur-content").classList.remove("active");
+                // Hide the curtain menu
+                document.getElementById("curtain-menu").style.display = "none";
+                // reset blur effect to content behind curtain menu to hidden
+                document.getElementById("blur-content").classList.remove("active");
+            }
     });
 });
 
