@@ -24,5 +24,7 @@
   "workbench.colorTheme": "Visual Studio Dark",
   "terminal.integrated.gpuAcceleration": "canvas",
   "editor.defaultFormatter": "HookyQR.beautify",
-  "cSpell.words": ["Conversinator"]
+  "cSpell.words": [
+    "Conversionator"
+  ]
 }
