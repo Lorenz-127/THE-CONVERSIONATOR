@@ -69,16 +69,16 @@
                             <label for="velocity-field">
                                 Velocity:
                             </label>
-                            <input id="velocity-field" class="input-field" type="number" aria-label="Velocity in km/h"
-                                value="0">
+                            <input id="velocity-field" class="input-field" type="text" aria-label="Velocity in km/h"
+                                value="0" pattern="\d+(\.\d{1,2})?">
                             <span class="units">km/h</span>
                         </div>
                         <div class="input-container">
                             <label for="distance-km-field">
                                 Distance in Km:
                             </label>
-                            <input id="distance-km-field" class="input-field" type="number" aria-label="Distance in km"
-                                value="0"><span class="units">km</span>
+                            <input id="distance-km-field" class="input-field" type="text" aria-label="Distance in km"
+                                value="0" pattern="\d+(\.\d{1,2})?"><span class="units">km</span>
                         </div>
 
                         <!-- Output fields for time and distance conversion -->
@@ -87,14 +87,14 @@
                                 Time:
                             </label>
                             <input id="time-field" class="input-field" type="text" aria-label="Time in h and min"
-                                value="0"><span class="units">h</span>
+                                value="0" pattern="\d+(\.\d{1,2})?"><span class="units">h</span>
                         </div>
                         <div class="output-container">
                             <label for="distance-mi-field">
                                 Distance in Mi:
                             </label>
-                            <input id="distance-mi-field" class="input-field" type="number" aria-label="Distance in mi"
-                                value="0"><span class="units">mi</span>
+                            <input id="distance-mi-field" class="input-field" type="text" aria-label="Distance in mi"
+                                value="0" pattern="\d+(\.\d{1,2})?"><span class="units">mi</span>
                         </div>
                     </div>
                 </div>
@@ -114,14 +114,15 @@
                             <label for="distance-fuel-field">
                                 Travel Distance:
                             </label>
-                            <input id="distance-fuel-field" class="input-field" type="text">
+                            <input id="distance-fuel-field" class="input-field" type="text" pattern="\d+(\.\d{1,2})?">
                             <span class="units">km/mi</span>
                         </div>
                         <div class="input-container">
                             <label for="distance-consumption-field">
                                 Fuel Consumption:
                             </label>
-                            <input id="distance-consumption-field" class="input-field" type="text">
+                            <input id="distance-consumption-field" class="input-field" type="text"
+                                pattern="\d+(\.\d{1,2})?">
                             <span class="units">l/100km</span>
                         </div>
                         <!-- Output fields for price per unit and cost -->
@@ -129,14 +130,14 @@
                             <label for="price-per-unit-field">
                                 Price per unit of fuel:
                             </label>
-                            <input id="price-per-unit-field" class="input-field" type="text">
+                            <input id="price-per-unit-field" class="input-field" type="text" pattern="\d+(\.\d{1,2})?">
                             <span class="units">€-$-£/l</span>
                         </div>
                         <div class="output-container">
                             <label for="cost-fuel-field">
                                 Cost:
                             </label>
-                            <input id="cost-fuel-field" class="input-field" type="text">
+                            <input id="cost-fuel-field" class="input-field" type="text" pattern="\d+(\.\d{1,2})?">
                             <span class="units">€/$/£</span>
                         </div>
                     </div>
@@ -168,7 +169,8 @@
                                 <label for="curency-origin-field">
                                     Amount:
                                 </label>
-                                <input id="curency-origin-field" class="input-field" type="text">
+                                <input id="curency-origin-field" class="input-field" type="text"
+                                    pattern="\d+(\.\d{1,2})?">
                                 <span class="units">€/$/£</span>
                             </div>
                         </div>
@@ -187,7 +189,8 @@
                                 <label for="curency-destination-field">
                                     Amount:
                                 </label>
-                                <input id="curency-destination-field" class="input-field" type="text">
+                                <input id="curency-destination-field" class="input-field" type="text"
+                                    pattern="\d+(\.\d{1,2})?">
                                 <span class="units">£/$/€</span>
                             </div>
                         </div>
@@ -228,7 +231,8 @@
                             <label for="distance-co2-footprint-field">
                                 Travel Distance:
                             </label>
-                            <input id="distance-co2-footprint-field" class="input-field" type="text">
+                            <input id="distance-co2-footprint-field" class="input-field" type="text"
+                                pattern="\d+(\.\d{1,2})?">
                             <span class="units">km/mi</span>
                         </div>
                         <!-- Output field for displaying CO₂ footprint -->
