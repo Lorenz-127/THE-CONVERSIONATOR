@@ -63,6 +63,33 @@ navLinks.forEach((link) => {
     });
 });
 
+// Function to update the navigation links based on screen size
+function updateNavLinks() {
+    // Check if screen size is larger then 992px
+    if (window.innerWidth >= 992) {
+        // If equal or bigger, set href of navigation links to "index.html"
+        navLinks.forEach((link) => {
+            if (link.getAttribute("href") !== "#instructions") {
+                link.setAttribute("href", "index.html");
+            }
+        });
+    } else {
+        // If smaller, set href of navigation their original values
+        navLinks[0].setAttribute("href", "#instructions");
+        navLinks[1].setAttribute("href", "#vst");
+        navLinks[2].setAttribute("href", "#fuel-consumption");
+        navLinks[3].setAttribute("href", "#currency-calculator");
+        navLinks[4].setAttribute("href", "#co2-footprint");
+        navLinks[5].setAttribute("href", "index.html");
+    }
+}
+
+// Call updateNavLinks when the window is resized
+window.addEventListener("resize", updateNavLinks);
+
+// Call updateNavLinks on page load
+window.addEventListener("load", updateNavLinks);
+
 // Replace "," with "." for German users
 function formatNumberForLocale(number) {
     return number.replace(",", ".");
