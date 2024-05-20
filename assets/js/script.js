@@ -92,7 +92,7 @@ window.addEventListener("load", updateNavLinks);
 
 // Replace "," with "." for German users
 function formatNumberForLocale(number) {
-    return number.replace(",", ".");
+    return String(number).replace(/,/g, ".");
 }
 
 // Add event listener to initialize calculations on input change
