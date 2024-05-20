@@ -14,6 +14,46 @@ document.getElementById("curtain-close").addEventListener("click", () => {
     document.getElementById("blur-content").classList.remove("active");
 });
 
+// Select all navigation links
+const navLinks = document.querySelectorAll(
+    ".overlay-nav-links a, .instructions-wrapper a"
+);
+
+// Function to hide all sections
+function hideAllSections() {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+        section.style.display = "none";
+    });
+}
+
+// Function to show selected section
+function showSection(id) {
+    const section = document.querySelector(id);
+    if (section) {
+        section.style.display = "grid";
+    }
+}
+
+// Add click event listener to each link
+navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        // Prevent default action
+        event.preventDefault();
+
+        // Hide all sections
+        hideAllSections();
+
+        // Show the selected section
+        showSection(this.getAttribute("href"));
+
+        // Hide the curtain menu
+        document.getElementById("curtain-menu").style.display = "none";
+        // reset blur effect to content behind curtain menu to hidden
+        document.getElementById("blur-content").classList.remove("active");
+    });
+});
+
 // Replace "," with "." for German users
 function formatNumberForLocale(number) {
     return number.replace(",", ".");
