@@ -393,6 +393,10 @@ option {
         max-width: 500px;
     }
 
+    .section-wrapper {
+        max-width: 750px;
+    }
+
     .output-container,
     .input-container {
         display: grid;
@@ -407,6 +411,7 @@ option {
 
     .section-wrapper {
         display: grid;
+        max-width: 950px;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
