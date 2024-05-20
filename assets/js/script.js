@@ -62,33 +62,72 @@ function formatNumberForLocale(number) {
 // Add event listener to initialize calculations on input change
 document.addEventListener("input", function (event) {
     const id = event.target.id;
-    event.target.value = formatNumberForLocale(event.target.value);
-    if (["velocity-field", "distance-km-field", "time-field", "distance-mi-field"].includes(id)) {
+    if (event.target.value.includes(",")) {
+        event.target.value = formatNumberForLocale(event.target.value);
+    }
+    if (
+        [
+            "velocity-field",
+            "distance-km-field",
+            "time-field",
+            "distance-mi-field",
+        ].includes(id)
+    ) {
         calculateTimeAndDistance();
-    } else if (["distance-fuel-field", "distance-consumption-field", "price-per-unit-field"].includes(id)) {
+    } else if (
+        [
+            "distance-fuel-field",
+            "distance-consumption-field",
+            "price-per-unit-field",
+        ].includes(id)
+    ) {
         calculateFuelCost();
-    } else if (["transportation-mode", "fuel-type", "distance-co2-footprint-field"].includes(id)) {
+    } else if (
+        [
+            "transportation-mode",
+            "fuel-type",
+            "distance-co2-footprint-field",
+        ].includes(id)
+    ) {
         calculateCO2Footprint();
     }
 });
 
 // Calculate Time and Distance
 function calculateTimeAndDistance() {
-    const velocity = parseFloat(formatNumberForLocale(document.getElementById("velocity-field").value));
-    const distanceKm = parseFloat(formatNumberForLocale(document.getElementById("distance-km-field").value));
-    const travelTime = parseFloat(formatNumberForLocale(document.getElementById("time-field").value));
-    const distanceMi = parseFloat(formatNumberForLocale(document.getElementById("distance-mi-field").value));
+    const velocity = parseFloat(
+        formatNumberForLocale(document.getElementById("velocity-field").value)
+    );
+    const distanceKm = parseFloat(
+        formatNumberForLocale(document.getElementById("distance-km-field").value)
+    );
+    const travelTime = parseFloat(
+        formatNumberForLocale(document.getElementById("time-field").value)
+    );
+    const distanceMi = parseFloat(
+        formatNumberForLocale(document.getElementById("distance-mi-field").value)
+    );
 
     if (!isNaN(velocity) && velocity > 0 && !isNaN(distanceKm)) {
         updateFields(distanceKm / velocity, distanceKm * 0.621371);
     } else if (!isNaN(travelTime) && travelTime > 0 && !isNaN(distanceKm)) {
-        document.getElementById("velocity-field").value = (distanceKm / travelTime).toFixed(2);
-        document.getElementById("distance-mi-field").value = (distanceKm * 0.621371).toFixed(2);
+        document.getElementById("velocity-field").value = (
+            distanceKm / travelTime
+        ).toFixed(2);
+        document.getElementById("distance-mi-field").value = (
+            distanceKm * 0.621371
+        ).toFixed(2);
     } else if (!isNaN(travelTime) && travelTime > 0 && !isNaN(velocity)) {
-        updateFields(travelTime, velocity * travelTime * 0.621371, velocity * travelTime);
+        updateFields(
+            travelTime,
+            velocity * travelTime * 0.621371,
+            velocity * travelTime
+        );
     } else if (!isNaN(travelTime) && travelTime > 0 && !isNaN(distanceMi)) {
         const distanceKm = distanceMi / 0.621371;
-        document.getElementById("velocity-field").value = (distanceKm / travelTime).toFixed(2);
+        document.getElementById("velocity-field").value = (
+            distanceKm / travelTime
+        ).toFixed(2);
         document.getElementById("distance-km-field").value = distanceKm.toFixed(2);
     } else if (!isNaN(velocity) && velocity > 0 && !isNaN(distanceMi)) {
         const distanceKm = distanceMi / 0.621371;
@@ -103,16 +142,28 @@ function calculateTimeAndDistance() {
 
 // Update fields with calculated values
 function updateFields(timeInHours, distanceMi, distanceKm) {
-    const remainingMinutes = Math.round((timeInHours - Math.floor(timeInHours)) * 60);
-    document.getElementById("time-field").value = `${Math.floor(timeInHours)}h ${remainingMinutes}m`;
-    if (distanceMi !== undefined) document.getElementById("distance-mi-field").value = distanceMi.toFixed(2);
-    if (distanceKm !== undefined) document.getElementById("distance-km-field").value = distanceKm.toFixed(2);
+    const remainingMinutes = Math.round(
+        (timeInHours - Math.floor(timeInHours)) * 60
+    );
+    document.getElementById("time-field").value = `${Math.floor(
+      timeInHours
+    )}h ${remainingMinutes}m`;
+    if (distanceMi !== undefined)
+        document.getElementById("distance-mi-field").value = distanceMi.toFixed(2);
+    if (distanceKm !== undefined)
+        document.getElementById("distance-km-field").value = distanceKm.toFixed(2);
 }
 
 // Function to reset all input fields
 function resetTravelTimeFields() {
-    document.querySelectorAll('#velocity-field, #distance-km-field, #time-field, #distance-mi-field').forEach(field => field.value = '0');
+    document
+        .querySelectorAll(
+            "#velocity-field, #distance-km-field, #time-field, #distance-mi-field"
+        )
+        .forEach((field) => (field.value = "0"));
 }
 
 // Event listener for reset button
-document.getElementById('reset-btn-time').addEventListener('click', resetTravelTimeFields);
+document
+    .getElementById("reset-btn-time")
+    .addEventListener("click", resetTravelTimeFields);
