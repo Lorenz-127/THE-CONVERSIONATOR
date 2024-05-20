@@ -116,8 +116,16 @@ document.addEventListener("input", function (event) {
             "distance-consumption-field",
             "price-per-unit-field",
         ].includes(id)
+    ) {} else if (
+        [
+            "currency-origin",
+            "currency-origin-field",
+            "currency-destination",
+            "currency-destination-field",
+        ].includes(id)
     ) {
-        calculateFuelCost();
+
+        calculateCurrency();
     } else if (
         [
             "transportation-mode",
@@ -199,7 +207,52 @@ function resetTravelTimeFields() {
         .forEach((field) => (field.value = "0"));
 }
 
-// Event listener for reset button
+
+function calculateCurrency() {
+    const originCurrency = document.getElementById('currency-origin').value;
+    const destinationCurrency = document.getElementById('currency-destination').value;
+    const amount = parseFloat(document.getElementById('currency-origin-field').value);
+
+    if (isNaN(amount) || amount <= 0) {
+        document.getElementById('currency-destination-field').value = '';
+        return;
+    }
+
+    // Exchange rates hard-coded to not use an api
+    const exchangeRates = {
+        'EUR': {
+            'USD': 1.10,
+            'GBP': 0.85
+        },
+        'USD': {
+            'EUR': 0.91,
+            'GBP': 0.77
+        },
+        'GBP': {
+            'EUR': 1.18,
+            'USD': 1.30
+        }
+    };
+
+    const rate = exchangeRates[originCurrency][destinationCurrency];
+    if (!rate) {
+        alert('Conversion rate not available');
+        return;
+    }
+
+    const convertedAmount = amount * rate;
+    document.getElementById('currency-destination-field').value = convertedAmount.toFixed(2);
+}
+
+// Reset button for currency calculator
+document.getElementById('reset-btn-currency').addEventListener('click', () => {
+    document.getElementById('currency-origin').value = 'EUR';
+    document.getElementById('currency-destination').value = 'GBP';
+    document.getElementById('currency-origin-field').value = '0.00';
+    document.getElementById('currency-destination-field').value = '0.00';
+});
+
+// Event listener for reset button for Travel Time section
 document
     .getElementById("reset-btn-time")
     .addEventListener("click", resetTravelTimeFields);
