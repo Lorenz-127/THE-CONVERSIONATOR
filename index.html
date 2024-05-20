@@ -150,7 +150,7 @@
                     <div class="flex-center">
                         <h2>Currency Calculator:</h2>
                         <!-- Button to reset input fields -->
-                        <i class="fa-solid fa-delete-left" id="reset-btn-footprint"></i>
+                        <i class="fa-solid fa-delete-left" id="reset-btn-currency"></i>
                     </div>
                     <!-- Input fields for transportation mode and fuel type -->
                     <div class="grid-wrapper">
@@ -159,7 +159,7 @@
                                 <label for="curency-origin">
                                     Currency origin:
                                 </label>
-                                <select id="curency-origin" class="input-field">
+                                <select id="currency-origin" class="input-field">
                                     <option value="EUR">EUR</option>
                                     <option value="USD">USD</option>
                                     <option value="GBP">GBP</option>
@@ -169,27 +169,27 @@
                                 <label for="curency-origin-field">
                                     Amount:
                                 </label>
-                                <input id="curency-origin-field" class="input-field" type="text"
+                                <input id="currency-origin-field" class="input-field" type="text" value="0.00"
                                     pattern="\d+(\.\d{1,2})?">
                                 <span class="units">€/$/£</span>
                             </div>
                         </div>
-                        <div class="curency-container">
+                        <div class="currency-container">
                             <div class="input-container">
                                 <label for="curency-destination">
                                     Currency destination:
                                 </label>
-                                <select id="curency-destination" class="input-field">
+                                <select id="currency-destination" class="input-field">
                                     <option value="GBP">GBP</option>
                                     <option value="USD">USD</option>
                                     <option value="EUR">EUR</option>
                                 </select>
                             </div>
                             <div class="input-container">
-                                <label for="curency-destination-field">
+                                <label for="currency-destination-field">
                                     Amount:
                                 </label>
-                                <input id="curency-destination-field" class="input-field" type="text"
+                                <input id="currency-destination-field" class="input-field" type="text" value="0.00"
                                     pattern="\d+(\.\d{1,2})?">
                                 <span class="units">£/$/€</span>
                             </div>
