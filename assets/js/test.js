@@ -41,31 +41,63 @@ function showSection(id) {
     }
 }
 
-// Function to calculate velocity with km and time (v = dkm / t)
-function calculateVelocityKm(distanceKm, time) {
-    if (time === 0) {
-        throw new Error("Time cannot be zero.");
+// Add click event listener to each overlay-nav-link
+navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        // Check clicked link href is "index.html"
+        if (
+            this.getAttribute("href") === "index.html" ||
+            this.getAttribute("href") === "#instructions"
+        )
+            if (this.getAttribute("href") === "index.html") {
+                // If it is, reload page for index.html or do nothing for #instructions
+                location.reload();
+            } else {
+                // Prevent default action
+                event.preventDefault();
+
+                // Hide all sections
+                hideAllSections();
+
+                // Show the selected section
+                showSection(this.getAttribute("href"));
+
+                // Hide the curtain menu
+                document.getElementById("curtain-menu").style.display = "none";
+                // reset blur effect to content behind curtain menu to hidden
+                document.getElementById("blur-content").classList.remove("active");
+            }
+    });
+});
+
+/**
+ * Function to update the navigation links based on screen size
+ */
+function updateNavLinks() {
+    // Check if screen size is larger then 992px
+    if (window.innerWidth >= 992) {
+        // If equal or bigger, set href of navigation links to "index.html"
+        navLinks.forEach((link) => {
+            if (link.getAttribute("href") !== "#instructions") {
+                link.setAttribute("href", "index.html");
+            }
+        });
+    } else {
+        // If smaller, set href of navigation their original values
+        navLinks[0].setAttribute("href", "#instructions");
+        navLinks[1].setAttribute("href", "#vst");
+        navLinks[2].setAttribute("href", "#fuel-consumption");
+        navLinks[3].setAttribute("href", "#currency-calculator");
+        navLinks[4].setAttribute("href", "#co2-footprint");
+        navLinks[5].setAttribute("href", "index.html");
     }
-    return distanceKm / time;
 }
 
-// Function to calculate velocity with mi and time (v = dmi / t)
-function calculateVelocityMi(distanceMi, time) {
-    if (time === 0) {
-        throw new Error("Time cannot be zero.");
-    }
-    return distanceMi / time;
-}
+// Call updateNavLinks when the window is resized
+window.addEventListener("resize", updateNavLinks);
 
-// Function to convert Km to Mi
-function kmToMiles(km) {
-    return km * 0.621371;
-}
-
-// Function to convert Mi to Km
-function milesToKm(miles) {
-    return miles * 1.60934;
-}
+// Call updateNavLinks on page load
+window.addEventListener("load", updateNavLinks);
 
 // Function to reset all travel time input fields
 function resetTravelTimeFields() {
