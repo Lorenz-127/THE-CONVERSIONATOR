@@ -1,27 +1,44 @@
-// Function to calculate travel time with km and velocity (t = dkm / v)
-function calculateTravelTimeKm(distanceKm, velocity) {
-    if (velocity === 0) {
-        throw new Error("Velocity cannot be zero.");
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Add event listener to element with ID "curtain-open"
+    document.getElementById("curtain-open").addEventListener("click", () => {
+        // Display the element with ID "curtain-menu" when clicked
+        document.getElementById("curtain-menu").style.display = "block";
+        // set blur effect to content behind curtain menu visible
+        document.getElementById("blur-content").classList.add("active");
+    });
+});
+// Add event listener to element with ID "curtain-close"
+document.getElementById("curtain-close").addEventListener("click", () => {
+    // Hide the element with ID "curtain-menu" when clicked
+    document.getElementById("curtain-menu").style.display = "none";
+    // reset blur effect to content behind curtain menu to hidden
+    document.getElementById("blur-content").classList.remove("active");
+});
+
+// Select all navigation links in overlay and instruction section
+const navLinks = document.querySelectorAll(
+    ".overlay-nav-links a, .instructions-wrapper a"
+);
+
+/**
+ * Function to hide all sections
+ */
+function hideAllSections() {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+        section.style.display = "none";
+    });
+}
+
+/**
+ * Function to show selected section
+ */
+function showSection(id) {
+    const section = document.querySelector(id);
+    if (section) {
+        section.style.display = "grid";
     }
-    return distanceKm / velocity;
-}
-
-// Function to calculate travel time with mi and velocity (t = dmi / v)
-function calculateTravelTimeMi(distanceMi, velocity) {
-    if (velocity === 0) {
-        throw new Error("Velocity cannot be zero.");
-    }
-    return distanceMi / velocity;
-}
-
-// Function to calculate distance in Km with velocity and time (d = v * t)
-function calculateDistanceKm(velocity, time) {
-    return velocity * time;
-}
-
-// Function to calculate distance in Mi with velocity and time (d = v * t)
-function calculateDistanceMi(velocity, time) {
-    return velocity * time;
 }
 
 // Function to calculate velocity with km and time (v = dkm / t)
