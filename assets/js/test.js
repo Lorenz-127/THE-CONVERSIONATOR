@@ -102,10 +102,56 @@ window.addEventListener("load", updateNavLinks);
 // Function to reset all travel time input fields
 function resetTravelTimeFields() {
     document.getElementById("velocity-field").value = "0.00";
-    document.getElementById("distance-km-field").value = "0.00";
-    document.getElementById("travel-time-field").value = "0h 0m";
-    document.getElementById("distance-mi-field").value = "0.00";
+    document.getElementById("distance-field").value = "0.00";
+    document.getElementById("time-field").value = "0h 0m";
 }
+
+/**
+ * Replace "," with "." for German users
+ */
+function replaceCommaWithDot(number) {
+    return String(number).replace(",", ".");
+}
+
+// Add event listener to initialize calculations on input change
+document.addEventListener("input", function (event) {
+    const inputFieldId = event.target.id;
+
+    // Replace commas with dots
+    if (event.target.value.includes(",")) {
+        event.target.value = replaceCommaWithDot(event.target.value);
+    }
+    // Determine which calculation to trigger based on the input field ID
+    if (
+        ["velocity-field", "distance-field", "time-field"].includes(inputFieldId)
+    ) {
+        calculateTimeAndDistance();
+    } else if (
+        [
+            "distance-fuel-field",
+            "distance-consumption-field",
+            "price-per-unit-field",
+        ].includes(inputFieldId)
+    ) {
+        CalculateTravelCost();
+    } else if (
+        [
+            "currency-origin",
+            "currency-origin-field",
+            "currency-destination",
+        ].includes(inputFieldId)
+    ) {
+        calculateCurrency();
+    } else if (
+        [
+            "transportation-mode",
+            "fuel-type",
+            "distance-co2-footprint-field",
+        ].includes(inputFieldId)
+    ) {
+        calculateCO2Footprint();
+    }
+});
 
 // Event listener for reset button to execute resetTravelTimeFields
 document
