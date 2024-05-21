@@ -95,53 +95,99 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        try {
-            const travelTime =
-                calculateTravelTimeKm(distanceKm, velocity) ||
-                calculateTravelTimeMi(distanceMi, velocity);
-            const distanceMi = calculateTravelTimeMi(distanceMi, velocity);
-            const distanceKm = calculateDistanceKm(velocity, time);
-            const velocity =
-                calculateVelocityKm(distanceKm, time) ||
-                calculateVelocityMi(distanceMi, time);
-
-            updateFields(travelTime, distanceMi, distanceKm, velocity);
-        } catch (error) {
-            alert(error.message);
-        }
+        const time = distance / velocity;
+        timeField.value = time.toFixed(2);
     }
 
-    velocityField.addEventListener("input", updateCalculations);
-    distanceKmField.addEventListener("input", updateCalculations);
-    distanceMiField.addEventListener("input", updateCalculations);
-    travelTimeField.addEventListener("input", updateCalculations);
+    velocityField.addEventListener("input", calculateTimeAndDistance);
+    distanceField.addEventListener("input", calculateTimeAndDistance);
 });
 
+let originalDistanceKm; // Declare a variable to store the original distance in kilometers
 
+document.getElementById("unit-select").addEventListener("change", function () {
+    const unit = this.value;
+    const velocityField = document.getElementById("velocity-field");
+    const distanceField = document.getElementById("distance-field");
+    const velocity = parseFloat(velocityField.value);
+    let distance = parseFloat(distanceField.value);
+    const conversion = 0.621371; // Conversion factor from kilometers to miles
 
-// function to calculate travel time with km and velocity
-// t = dkm/v
+    if (unit === "mi") {
+        // Store the original distance in kilometers
+        originalDistanceKm = distance;
 
-// function to calculate travel time with mi and velocity
-// t = dmi/v
+        // Convert distance from km to mi
+        distance = distance * conversion;
+        document.querySelector(".units-vst-v").textContent = "mi/h";
+        document.querySelector(".units-vst-d").textContent = "mi";
+    } else {
+        // Use the original distance in kilometers
+        distance = originalDistanceKm;
+        document.querySelector(".units-vst-v").textContent = "km/h";
+        document.querySelector(".units-vst-d").textContent = "km";
+    }
 
-// function to calculate distance in Km with velocity and time
-// dkm = v/t
+    const time = distance / velocity;
 
-// function to calculate distance in Mi with velocity and time
-// dmi = v/t
+    document.getElementById("time-field").value = time.toFixed(2);
+});
 
-// function to calculate velocity with km and time
-// v = dkm/t
+/**
+ * Function to convert currency
+ */
+function calculateCurrency() {
+    const originCurrency = document.getElementById("currency-origin").value;
+    const destinationCurrency = document.getElementById(
+        "currency-destination"
+    ).value;
+    const amount = parseFloat(
+        document.getElementById("currency-origin-field").value
+    );
 
-// function to calculate velocity with mi and time
-// v = dmi/t
+    if (isNaN(amount) || amount <= 0) {
+        document.getElementById("currency-destination-field").value = "";
+        return;
+    }
 
-// function to convert Km to Mi
-// 1 km = 0.621371 mi
+    // Exchange rates hard-coded to not use an api
+    const exchangeRates = {
+        EUR: {
+            USD: 1.1,
+            GBP: 0.85,
+        },
+        USD: {
+            EUR: 0.91,
+            GBP: 0.77,
+        },
+        GBP: {
+            EUR: 1.18,
+            USD: 1.3,
+        },
+    };
 
-// function to convert Mi to Km
-// 1 mi = 1.60934 km
+    const rate = exchangeRates[originCurrency][destinationCurrency];
+    if (!rate) {
+        alert("Conversion rate not available");
+        return;
+    }
 
-// function to reset all travel time input fields
-// set all input fields to 0
+    const convertedAmount = amount * rate;
+    document.getElementById("currency-destination-field").value =
+        convertedAmount.toFixed(2);
+}
+
+/**
+ * Function to reset all currency calculator input fields
+ */
+function resetCurrencyCalculator() {
+    document.getElementById("currency-origin").value = "EUR";
+    document.getElementById("currency-destination").value = "GBP";
+    document.getElementById("currency-origin-field").value = "0.00";
+    document.getElementById("currency-destination-field").value = "0.00";
+}
+
+// Event listener for reset button to execute resetCurrencyCalculator
+document
+    .getElementById("reset-btn-currency")
+    .addEventListener("click", resetCurrencyCalculator);
