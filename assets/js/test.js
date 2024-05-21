@@ -160,33 +160,25 @@ document
 
 document.addEventListener("DOMContentLoaded", () => {
     const velocityField = document.getElementById("velocity-field");
-    const distanceKmField = document.getElementById("distance-km-field");
-    const distanceMiField = document.getElementById("distance-mi-field");
-    const travelTimeField = document.getElementById("travel-time-field");
+    const distanceField = document.getElementById("distance-field");
+    const timeField = document.getElementById("time-field");
 
-    // Function to update fields with the calculated values
-    function updateFields(timeInHours, distanceMi, distanceKm) {
-        const remainingMinutes = Math.round(
-            (timeInHours - Math.floor(timeInHours)) * 60
+    // Get and parse input values, replacing commas with dots for decimal points
+    const getParsedValue = (inputField) => {
+        const value = replaceCommaWithDot(
+            document.getElementById(inputField).value
         );
-        document.getElementById("travel-time-field").value = `${Math.floor(
-        timeInHours
-      )}h ${remainingMinutes}m`;
-        if (distanceMi !== undefined)
-            document.getElementById("distance-mi-field").value =
-            distanceMi.toFixed(2);
-        if (distanceKm !== undefined)
-            document.getElementById("distance-km-field").value =
-            distanceKm.toFixed(2);
-    }
+        document.getElementById(inputField).value = value; // Update the input field with the replaced value
+        return parseFloat(value);
+    };
 
     // Function to update values
-    function updateCalculations() {
-        const velocity = parseFloat(velocityField.value);
-        const distanceKm = parseFloat(distanceKmField.value);
+    function calculateTimeAndDistance() {
+        const velocity = getParsedValue("velocity-field");
+        const distance = getParsedValue("distance-field");
 
-        if (isNaN(velocity) || isNaN(distanceKm)) {
-            updateFields(0, 0, 0);
+        if (isNaN(velocity) || isNaN(distance)) {
+            timeField.value = "0h 0m";
             return;
         }
 
