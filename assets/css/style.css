@@ -192,6 +192,8 @@ input[type=number] {
     text-align: center;
 }
 
+.units-vst-d,
+.units-vst-v,
 .units,
 label {
     font-size: large;
