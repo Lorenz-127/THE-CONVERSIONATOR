@@ -82,20 +82,22 @@
                         </div>
 
                         <!-- Output fields for time and distance conversion -->
-                        <div class="output-container">
-                            <label for="time-field">
-                                Time:
-                            </label>
-                            <input id="time-field" class="input-field" type="text" aria-label="Time in h and min"
-                                value="0.00" pattern="\d+(\.\d{1,2})?"><span class="units">h</span>
-                        </div>
+
                         <div class="output-container">
                             <label for="distance-mi-field">
                                 Distance in Mi:
                             </label>
-                            <input id="distance-mi-field" class="input-field" type="text" aria-label="Distance in mi"
-                                value="0.00" pattern="\d+(\.\d{1,2})?"><span class="units">mi</span>
+                            <input id="distance-mi-field" class="input-field readonly-field" type="text"
+                                aria-label="Distance in mi" value="0.00" readonly><span class="units">mi</span>
                         </div>
+                        <div class="output-container">
+                            <label for="time-field">
+                                Time:
+                            </label>
+                            <input id="time-field" class="input-field readonly-field" type="text"
+                                aria-label="Time in h and min" value="0.00" readonly><span class="units">h</span>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -137,7 +139,7 @@
                             <label for="cost-fuel-field">
                                 Cost:
                             </label>
-                            <input id="cost-fuel-field" class="input-field" type="text" pattern="\d+(\.\d{1,2})?">
+                            <input id="cost-fuel-field" class="input-field readonly-field" type="text" readonly>
                             <span class="units">€/$/£</span>
                         </div>
                     </div>
@@ -157,7 +159,7 @@
                         <div class="curency-container">
                             <div class="input-container">
                                 <label for="curency-origin">
-                                    Currency origin:
+                                    From:
                                 </label>
                                 <select id="currency-origin" class="input-field">
                                     <option value="EUR">EUR</option>
@@ -167,7 +169,7 @@
                             </div>
                             <div class="input-container">
                                 <label for="curency-origin-field">
-                                    Amount:
+                                    Origin:
                                 </label>
                                 <input id="currency-origin-field" class="input-field" type="text" value="0.00"
                                     pattern="\d+(\.\d{1,2})?">
@@ -177,7 +179,7 @@
                         <div class="currency-container">
                             <div class="input-container">
                                 <label for="curency-destination">
-                                    Currency destination:
+                                    To:
                                 </label>
                                 <select id="currency-destination" class="input-field">
                                     <option value="GBP">GBP</option>
@@ -187,10 +189,10 @@
                             </div>
                             <div class="input-container">
                                 <label for="currency-destination-field">
-                                    Amount:
+                                    Destination:
                                 </label>
-                                <input id="currency-destination-field" class="input-field" type="text" value="0.00"
-                                    pattern="\d+(\.\d{1,2})?">
+                                <input id="currency-destination-field" class="input-field readonly-field" type="text"
+                                    value="0.00" readonly>
                                 <span class="units">£/$/€</span>
                             </div>
                         </div>
@@ -209,7 +211,7 @@
                     <div class="grid-wrapper">
                         <div class="input-container">
                             <label for="transportation-mode">
-                                Transportation Mode:
+                                Transportation:
                             </label>
                             <select id="transportation-mode" class="input-field">
                                 <option value="train">Train</option>
@@ -229,7 +231,7 @@
                         </div>
                         <div class="input-container">
                             <label for="distance-co2-footprint-field">
-                                Travel Distance:
+                                Distance:
                             </label>
                             <input id="distance-co2-footprint-field" class="input-field" type="text"
                                 pattern="\d+(\.\d{1,2})?">
@@ -240,7 +242,7 @@
                             <label for="co2-footprint-field">
                                 CO₂ Footprint:
                             </label>
-                            <input id="co2-footprint-field" class="input-field" type="text" readonly>
+                            <input id="co2-footprint-field" class="input-field readonly-field" type="text" readonly>
                             <span class="units">t-CO₂</span>
                         </div>
                     </div>
