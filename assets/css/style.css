@@ -132,6 +132,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 /* flex utilities */
@@ -203,16 +204,20 @@ option {
     font-weight: 600;
 }
 
+
 .output-container,
 .input-container {
+
     display: grid;
     grid-template-columns: 120px 50px 80px;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
     gap: 1rem;
     text-align: left;
     justify-content: center;
     align-items: center;
 }
+
+
 
 /* MARK: instructions */
 .instructions-container {
@@ -259,6 +264,10 @@ option {
     overflow: auto;
 }
 
+.readonly-field {
+    background: var(--clr-blur-content);
+}
+
 /* Header */
 .header-container {
     display: flex;
@@ -268,7 +277,7 @@ option {
     align-items: center;
     padding: 0 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--clr-text-light);
+    border-bottom: 1px solid var(--clr-overlay);
 }
 
 .header-container h1 {
