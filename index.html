@@ -76,35 +76,24 @@
                             <label for="velocity-field">
                                 Velocity:
                             </label>
-                            <input id="velocity-field" class="input-field" type="text" aria-label="Velocity in km/h"
-                                value="0.00" pattern="\d+(\.\d{1,2})?">
-                            <span class="units">km/h</span>
+                            <input id="velocity-field" class="input-field" type="text"
+                                aria-label="Velocity in km/h or mi/h" value="0.00" pattern="\d+(\.\d{1,2})?">
+                            <span class="units-vst-v">km/h</span>
                         </div>
                         <div class="input-container">
-                            <label for="distance-km-field">
-                                Distance in Km:
+                            <label for="distance-field">
+                                Distance:
                             </label>
-                            <input id="distance-km-field" class="input-field" type="text" aria-label="Distance in km"
-                                value="0.00" pattern="\d+(\.\d{1,2})?"><span class="units">km</span>
-                        </div>
-
-                        <!-- Output fields for time and distance conversion -->
-
-                        <div class="output-container">
-                            <label for="distance-mi-field">
-                                Distance in Mi:
-                            </label>
-                            <input id="distance-mi-field" class="input-field readonly-field" type="text"
-                                aria-label="Distance in mi" value="0.00" readonly><span class="units">mi</span>
+                            <input id="distance-field" class="input-field" type="text" aria-label="Distance in km"
+                                value="0.00" pattern="\d+(\.\d{1,2})?"><span class="units-vst-d">km</span>
                         </div>
                         <div class="output-container">
                             <label for="time-field">
                                 Time:
                             </label>
                             <input id="time-field" class="input-field readonly-field" type="text"
-                                aria-label="Time in h and min" value="0.00" readonly><span class="units">h</span>
+                                aria-label="Time in h and min" value="0h 0m" readonly><span class="units">h</span>
                         </div>
-
                     </div>
                 </div>
             </section>
