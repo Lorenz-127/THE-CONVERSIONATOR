@@ -183,18 +183,14 @@ function calculateTimeForDistance() {
     const distance = getParsedValue("distance-field");
     const timeField = document.getElementById("time-field");
 
-        if (isNaN(velocity) || isNaN(distance)) {
-            timeField.value = "0h 0m";
-            return;
-        }
-
-        const time = distance / velocity;
-        timeField.value = time.toFixed(2);
+    if (isNaN(velocity) || isNaN(distance)) {
+        timeField.value = "0h 0m";
+        return;
     }
 
-    velocityField.addEventListener("input", calculateTimeAndDistance);
-    distanceField.addEventListener("input", calculateTimeAndDistance);
-});
+    const time = distance / velocity;
+    timeField.value = formatHoursAndMinutes(time);
+}
 
 let originalDistanceKm; // Declare a variable to store the original distance in kilometers
 
