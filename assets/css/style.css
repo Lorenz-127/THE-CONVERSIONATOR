@@ -121,6 +121,11 @@ i:hover {
     color: var(--clr-danger-light);
 }
 
+.fa-bars,
+.fa-circle-question {
+    margin-right: 1rem;
+}
+
 /* Hide Arrows From Input Number
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -285,7 +290,7 @@ option {
 .header-container h1 {
     flex-grow: 1;
     text-align: center;
-    padding-right: 2rem;
+    padding-left: 3rem;
 }
 
 /* Blur Content behind overlay */
