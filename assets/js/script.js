@@ -23,6 +23,23 @@ const navLinks = document.querySelectorAll(
     ".overlay-nav-links a, .instructions-wrapper a"
 );
 
+// Add even listener to element with ID "open-instructions"
+infoBtn.addEventListener("click", function () {
+    // Hide all sections
+    hideAllSections();
+
+    // Show instructions section
+    openInstructionSection();
+})
+
+/**
+ * Function to open the Instructions via circle-question icon
+ */
+function openInstructionSection() {
+    const instructionSection = document.getElementById("instructions");
+    instructionSection.style.display = "grid";
+}
+
 /**
  * Function to hide all sections
  */
