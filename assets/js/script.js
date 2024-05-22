@@ -62,9 +62,9 @@ navLinks.forEach((link) => {
                 // Show the selected section
                 showSection(this.getAttribute("href"));
 
-                // Hide the curtain menu
-                document.getElementById("curtain-menu").style.display = "none";
-                // reset blur effect to content behind curtain menu to hidden
+                // Hide the modal menu
+                document.getElementById("modal-menu").style.display = "none";
+                // reset blur effect to content behind modal menu to hidden
                 document.getElementById("blur-content").classList.remove("active");
             }
     });
@@ -99,7 +99,9 @@ window.addEventListener("resize", updateNavLinks);
 // Call updateNavLinks on page load
 window.addEventListener("load", updateNavLinks);
 
-// Function to reset all travel time input fields
+/** 
+ * Function to reset all travel time input fields
+ */
 function resetTravelTimeFields() {
     document.getElementById("velocity-field").value = "0.00";
     document.getElementById("distance-field").value = "0.00";
@@ -125,29 +127,17 @@ document.addEventListener("input", function (event) {
     if (
         ["velocity-field", "distance-field", "time-field"].includes(inputFieldId)
     ) {
-        calculateTimeAndDistance();
+        calculateTimeForDistance();
     } else if (
-        [
-            "distance-fuel-field",
-            "distance-consumption-field",
-            "price-per-unit-field",
-        ].includes(inputFieldId)
+        ["distance-fuel-field", "distance-consumption-field", "price-per-unit-field", ].includes(inputFieldId)
     ) {
         CalculateTravelCost();
     } else if (
-        [
-            "currency-origin",
-            "currency-origin-field",
-            "currency-destination",
-        ].includes(inputFieldId)
+        ["currency-origin", "currency-origin-field", "currency-destination", ].includes(inputFieldId)
     ) {
         calculateCurrency();
     } else if (
-        [
-            "transportation-mode",
-            "fuel-type",
-            "distance-co2-footprint-field",
-        ].includes(inputFieldId)
+        ["transportation-mode", "fuel-type", "distance-co2-footprint-field", ].includes(inputFieldId)
     ) {
         calculateCO2Footprint();
     }
