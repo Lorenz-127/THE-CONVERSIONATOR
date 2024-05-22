@@ -151,7 +151,11 @@ document
 document.addEventListener("DOMContentLoaded", () => {
     const velocityField = document.getElementById("velocity-field");
     const distanceField = document.getElementById("distance-field");
-    const timeField = document.getElementById("time-field");
+
+
+    velocityField.addEventListener("input", calculateTimeForDistance);
+    distanceField.addEventListener("input", calculateTimeForDistance);
+});
 
     // Get and parse input values, replacing commas with dots for decimal points
     const getParsedValue = (inputField) => {
