@@ -1,18 +1,18 @@
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-    // Add event listener to element with ID "curtain-open"
-    document.getElementById("curtain-open").addEventListener("click", () => {
-        // Display the element with ID "curtain-menu" when clicked
-        document.getElementById("curtain-menu").style.display = "block";
-        // set blur effect to content behind curtain menu visible
+    // Add event listener to element with ID "modal-open"
+    document.getElementById("modal-open").addEventListener("click", () => {
+        // Display the element with ID "modal-menu" when clicked
+        document.getElementById("modal-menu").style.display = "block";
+        // set blur effect to content behind modal menu visible
         document.getElementById("blur-content").classList.add("active");
     });
 });
-// Add event listener to element with ID "curtain-close"
-document.getElementById("curtain-close").addEventListener("click", () => {
-    // Hide the element with ID "curtain-menu" when clicked
-    document.getElementById("curtain-menu").style.display = "none";
-    // reset blur effect to content behind curtain menu to hidden
+// Add event listener to element with ID "modal-close"
+document.getElementById("modal-close").addEventListener("click", () => {
+    // Hide the element with ID "modal-menu" when clicked
+    document.getElementById("modal-menu").style.display = "none";
+    // reset blur effect to content behind modal menu to hidden
     document.getElementById("blur-content").classList.remove("active");
 });
 

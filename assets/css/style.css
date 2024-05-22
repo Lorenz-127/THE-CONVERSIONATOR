@@ -308,8 +308,8 @@ option {
     visibility: visible;
 }
 
-/* Curtain Menu */
-.curtain-overlay {
+/* Modal Menu */
+.modal-overlay {
     display: none;
     position: fixed;
     height: 100%;
@@ -329,21 +329,21 @@ option {
     text-align: center;
 }
 
-.curtain-overlay li {
+.modal-overlay li {
     margin-bottom: 1rem;
 }
 
-.curtain-overlay li:hover {
+.modal-overlay li:hover {
     transform: scale(1.7);
 }
 
-.curtain-overlay a {
+.modal-overlay a {
     color: var(--clr-primary-light);
     font-family: var(--font-text);
     font-weight: 600;
 }
 
-#curtain-close {
+#modal-close {
     position: absolute;
     top: 3rem;
     right: 2rem;
