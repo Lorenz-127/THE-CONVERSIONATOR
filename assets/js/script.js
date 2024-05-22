@@ -1,22 +1,24 @@
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-    // Add event listener to element with ID "modal-open"
-    document.getElementById("modal-open").addEventListener("click", () => {
+    // Add event listener to element with ID "open-modal-menu"
+    document.getElementById("open-modal-menu").addEventListener("click", () => {
         // Display the element with ID "modal-menu" when clicked
         document.getElementById("modal-menu").style.display = "block";
         // set blur effect to content behind modal menu visible
         document.getElementById("blur-content").classList.add("active");
     });
 });
-// Add event listener to element with ID "modal-close"
-document.getElementById("modal-close").addEventListener("click", () => {
+// Add event listener to element with ID "close-modal"
+document.getElementById("close-modal").addEventListener("click", () => {
     // Hide the element with ID "modal-menu" when clicked
     document.getElementById("modal-menu").style.display = "none";
     // reset blur effect to content behind modal menu to hidden
     document.getElementById("blur-content").classList.remove("active");
 });
 
-// Select all navigation links in overlay and instruction section
+// Get element with ID "open-instructions"
+const infoBtn = document.getElementById("open-instructions");
+// Get navigation links in overlay and instruction section
 const navLinks = document.querySelectorAll(
     ".overlay-nav-links a, .instructions-wrapper a"
 );

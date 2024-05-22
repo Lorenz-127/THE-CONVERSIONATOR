@@ -343,7 +343,7 @@ option {
     font-weight: 600;
 }
 
-#modal-close {
+#close-modal {
     position: absolute;
     top: 3rem;
     right: 2rem;
