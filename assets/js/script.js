@@ -157,19 +157,31 @@ document.addEventListener("DOMContentLoaded", () => {
     distanceField.addEventListener("input", calculateTimeForDistance);
 });
 
-    // Get and parse input values, replacing commas with dots for decimal points
-    const getParsedValue = (inputField) => {
-        const value = replaceCommaWithDot(
-            document.getElementById(inputField).value
-        );
-        document.getElementById(inputField).value = value; // Update the input field with the replaced value
-        return parseFloat(value);
-    };
+// Get and parse input values, replacing commas with dots for decimal points
+const getParsedValue = (inputField) => {
+    const dotForComma = replaceCommaWithDot(
+        document.getElementById(inputField).value
+    );
+    document.getElementById(inputField).value = dotForComma; // Update the input field with the replaced value
+    return parseFloat(dotForComma);
+};
 
-    // Function to update values
-    function calculateTimeAndDistance() {
-        const velocity = getParsedValue("velocity-field");
-        const distance = getParsedValue("distance-field");
+/**
+ * Format time in hours and remaining minutes.
+ */
+function formatHoursAndMinutes(timeInHours) {
+    const hours = Math.floor(timeInHours);
+    const minutes = Math.round((timeInHours - hours) * 60);
+    return `${hours}h ${minutes}m`;
+}
+
+/** 
+ * Function to calculate time needed for distance
+ */
+function calculateTimeForDistance() {
+    const velocity = getParsedValue("velocity-field");
+    const distance = getParsedValue("distance-field");
+    const timeField = document.getElementById("time-field");
 
         if (isNaN(velocity) || isNaN(distance)) {
             timeField.value = "0h 0m";
