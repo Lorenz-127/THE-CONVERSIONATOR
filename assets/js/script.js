@@ -4,16 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("open-modal-menu").addEventListener("click", () => {
         // Display the element with ID "modal-menu" when clicked
         document.getElementById("modal-menu").style.display = "block";
-        // set blur effect to content behind modal menu visible
+        // Set blur effect to content behind modal menu visible
         document.getElementById("blur-content").classList.add("active");
+        // Disable body scroll
+        document.body.style.overflow = 'hidden';
     });
-});
-// Add event listener to element with ID "close-modal"
-document.getElementById("close-modal").addEventListener("click", () => {
-    // Hide the element with ID "modal-menu" when clicked
-    document.getElementById("modal-menu").style.display = "none";
-    // reset blur effect to content behind modal menu to hidden
-    document.getElementById("blur-content").classList.remove("active");
+
+    // Add event listener to element with ID "close-modal"
+    document.getElementById("close-modal").addEventListener("click", () => {
+        // Hide the element with ID "modal-menu" when clicked
+        document.getElementById("modal-menu").style.display = "none";
+        // Reset blur effect to content behind modal menu to hidden
+        document.getElementById("blur-content").classList.remove("active");
+        // Enable body scroll
+        document.body.style.overflow = 'auto';
+    });
 });
 
 // Get element with ID "open-instructions"
