@@ -114,31 +114,31 @@
                             <label for="distance-fuel-field">
                                 Travel Distance:
                             </label>
-                            <input id="distance-fuel-field" class="input-field" type="text" pattern="\d+(\.\d{1,2})?">
-                            <span class="units">km/mi</span>
+                            <input id="distance-fuel-field" class="input-field" type="text" value="0.00">
+                            <span class="units">km|mi</span>
                         </div>
                         <div class="input-container">
                             <label for="distance-consumption-field">
                                 Fuel Consumption:
                             </label>
-                            <input id="distance-consumption-field" class="input-field" type="text"
-                                pattern="\d+(\.\d{1,2})?">
-                            <span class="units">l/100km</span>
+                            <input id="distance-consumption-field" class="input-field" type="text" value="0.00">
+                            <span class="units">l/100km|mi</span>
                         </div>
                         <!-- Output fields for price per unit and cost -->
                         <div class="output-container">
                             <label for="price-per-unit-field">
                                 Price per unit of fuel:
                             </label>
-                            <input id="price-per-unit-field" class="input-field" type="text" pattern="\d+(\.\d{1,2})?">
-                            <span class="units">€-$-£/l</span>
+                            <input id="price-per-unit-field" class="input-field" type="text" value="0.00">
+                            <span class="units">€|$|£/l</span>
                         </div>
                         <div class="output-container">
                             <label for="cost-fuel-field">
                                 Cost:
                             </label>
-                            <input id="cost-fuel-field" class="input-field readonly-field" type="text" readonly>
-                            <span class="units">€/$/£</span>
+                            <input id="cost-fuel-field" class="input-field readonly-field" type="text" value="0.00"
+                                readonly>
+                            <span class="units">€|$|£</span>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                                 </label>
                                 <input id="currency-origin-field" class="input-field" type="text" value="0.00"
                                     pattern="\d+(\.\d{1,2})?">
-                                <span class="units">€/$/£</span>
+                                <span class="units">€|$|£</span>
                             </div>
                         </div>
                         <div class="currency-container">
@@ -191,7 +191,7 @@
                                 </label>
                                 <input id="currency-destination-field" class="input-field readonly-field" type="text"
                                     value="0.00" readonly>
-                                <span class="units">£/$/€</span>
+                                <span class="units">£|$|€</span>
                             </div>
                         </div>
                     </div>
