@@ -399,3 +399,26 @@ function resetCo2Fields() {
     document.getElementById("distance-co2-footprint-field").value = "0.00";
     document.getElementById("co2-footprint-field").value = "0.00";
 }
+
+/**
+ * Function to calculate travel cost
+ */
+function CalculateTravelCost() {
+    const distanceCost = getParsedValue("distance-fuel-field");
+    const consumptionCost = getParsedValue("distance-consumption-field");
+    const pricePerUnit = getParsedValue("price-per-unit-field");
+    const costField = document.getElementById("cost-fuel-field");
+
+    // Check if inputs are valid numbers
+    if (isNaN(distanceCost) || isNaN(consumptionCost) || isNaN(pricePerUnit)) {
+        costField.value = "0.00";
+        return;
+    }
+
+    // Calculate the travel cost 
+    const fuelUsed = (distanceCost / 100) * consumptionCost; // Fuel used in liters
+    const travelCost = fuelUsed * pricePerUnit;
+
+    // Display the cost in the output field
+    costField.value = travelCost.toFixed(2);
+}
