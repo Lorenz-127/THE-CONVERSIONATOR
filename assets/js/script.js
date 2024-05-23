@@ -422,3 +422,6 @@ function CalculateTravelCost() {
     // Display the cost in the output field
     costField.value = travelCost.toFixed(2);
 }
+
+// Event listener for reset button to execute resetCostFields
+document.getElementById("reset-btn-cost").addEventListener("click", resetTravelCostFields);
