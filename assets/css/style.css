@@ -403,12 +403,22 @@ option {
 }
 
 /* MARK Responsive Designs */
+/* For small tablets  >= 650px */
+@media (min-width: 650px) {
+    .container {
+        max-width: 450px;
+    }
 
+    .section-wrapper {
+        max-width: 600px;
+    }
+
+}
 
 /* For tablets  >= 768px */
 @media (min-width: 768px) {
     .container {
-        max-width: 500px;
+        max-width: 450px;
     }
 
     .section-wrapper {
@@ -420,7 +430,6 @@ option {
         display: grid;
         grid-template-columns: 120px 70px 70px;
     }
-
 
 }
 
