@@ -307,3 +307,95 @@ function resetCurrencyCalculator() {
 document
     .getElementById("reset-btn-currency")
     .addEventListener("click", resetCurrencyCalculator);
+
+
+// Emission factors in kg CO2 per km
+const emissionFactors = {
+    train: {
+        electricity: 0.022,
+        diesel: 0.045,
+    },
+    bus: {
+        electricity: 0.032,
+        diesel: 0.09,
+        gasoline: 0.11,
+    },
+    car: {
+        electricity: 0.025,
+        diesel: 0.15,
+        gasoline: 0.17,
+    },
+};
+
+/**
+ * Function to calculate CO₂ footprint for your travel
+ */
+function calculateCO2Footprint() {
+    const transportationMode = document.getElementById(
+        "transportation-mode"
+    ).value;
+    const fuelType = document.getElementById("fuel-type").value;
+    const distanceCo2 = getParsedValue("distance-co2-footprint-field");
+    const co2Field = document.getElementById("co2-footprint-field");
+
+    // Check if distance is a number
+    if (isNaN(distanceCo2)) {
+        co2Field.value = "0.00";
+        return;
+    }
+
+    // Get the emission factor for the selected mode and fuel type
+    const emissionFactor = emissionFactors[transportationMode][fuelType];
+    // Calculate the CO2 footprint
+    const co2Footprint = distanceCo2 * emissionFactor;
+    // Display the CO2 footprint in the output field
+    co2Field.value = co2Footprint.toFixed(2);
+}
+
+let originalDistanceCo2; // Declare a variable to store the original distance in kilometers
+
+// Event listener for units-Co2 select dropdown
+document
+    .getElementById("unit-select-co2")
+    .addEventListener("change", function () {
+        const co2Unit = this.value;
+        const distanceCo2Field = document.getElementById(
+            "distance-co2-footprint-field"
+        );
+        let distanceCo2 = parseFloat(distanceCo2Field.value);
+
+        // Conversion from miles to kilometers for Co2 footprint calculation
+        const conversionMiCo2 = 1.60934;
+
+        if (co2Unit === "mi") {
+            // Store the original distance in kilometers for conversion
+            originalDistanceCo2 = distanceCo2;
+
+            // Convert distance from km to mi
+            distanceCo2 = distanceCo2 / conversionMiCo2;
+            document.querySelector(".units-co2-d").textContent = "mi";
+            document.querySelector(".units-co2-g").textContent = "kgCO₂/mi";
+        } else {
+            // Use the original distance in kilometers
+            distanceCo2 = originalDistanceCo2;
+            document.querySelector(".units-co2-d").textContent = "km";
+            document.querySelector(".units-co2-g").textContent = "kgCO₂/km";
+        }
+
+        distanceCo2Field.value = distanceCo2.toFixed(2);
+        calculateCO2Footprint(); // Recalculate the CO2 footprint after unit change
+    });
+
+// Event listener for reset button to execute resetCo2Fields
+document.getElementById("reset-btn-footprint").addEventListener("click", resetCo2Fields);
+
+/**
+ * Function to reset the CO2 footprint calculation fields
+ */
+function resetCo2Fields() {
+    document.getElementById("transportation-mode").value = "train";
+    document.getElementById("fuel-type").value = "electricity";
+    document.getElementById("unit-select-co2").value = "km";
+    document.getElementById("distance-co2-footprint-field").value = "0.00";
+    document.getElementById("co2-footprint-field").value = "0.00";
+}
