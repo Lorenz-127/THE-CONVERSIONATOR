@@ -228,20 +228,27 @@
                             </select>
                         </div>
                         <div class="input-container">
+                            <label for="unit-select-co2">Unit:</label>
+                            <select id="unit-select-co2" class="input-field">
+                                <option value="km">Km</option>
+                                <option value="mi">Mi</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
                             <label for="distance-co2-footprint-field">
                                 Distance:
                             </label>
-                            <input id="distance-co2-footprint-field" class="input-field" type="text"
-                                pattern="\d+(\.\d{1,2})?">
-                            <span class="units">km/mi</span>
+                            <input id="distance-co2-footprint-field" class="input-field" type="text" value="0.00">
+                            <span class="units-co2-d">km</span>
                         </div>
                         <!-- Output field for displaying CO₂ footprint -->
                         <div class="output-container">
                             <label for="co2-footprint-field">
-                                CO₂ Footprint:
+                                Emission:
                             </label>
-                            <input id="co2-footprint-field" class="input-field readonly-field" type="text" readonly>
-                            <span class="units">t-CO₂</span>
+                            <input id="co2-footprint-field" class="input-field readonly-field" type="text" value="0.00"
+                                readonly>
+                            <span class="units-co2-g">kgCO₂/km</span>
                         </div>
                     </div>
                 </div>
