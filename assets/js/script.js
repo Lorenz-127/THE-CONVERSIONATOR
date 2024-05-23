@@ -68,57 +68,57 @@ function showSection(id) {
     }
 }
 
-// Add click event listener to each overlay-nav-link
-navLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-        // Check clicked link href is "index.html"
-        if (
-            this.getAttribute("href") === "index.html" ||
-            this.getAttribute("href") === "#instructions"
-        )
-            if (this.getAttribute("href") === "index.html") {
-                // If it is, reload page for index.html or do nothing for #instructions
-                location.reload();
-            } else {
-                // Prevent default action
-                event.preventDefault();
-
-                // Hide all sections
-                hideAllSections();
-
-                // Show the selected section
-                showSection(this.getAttribute("href"));
-
-                // Hide the modal menu
-                document.getElementById("modal-menu").style.display = "none";
-                // reset blur effect to content behind modal menu to hidden
-                document.getElementById("blur-content").classList.remove("active");
-            }
-    });
-});
-
 /**
  * Function to update the navigation links based on screen size
  */
 function updateNavLinks() {
     // Check if screen size is larger then 992px
     if (window.innerWidth >= 992) {
-        // If equal or bigger, set href of navigation links to "index.html"
-        navLinks.forEach((link) => {
-            if (link.getAttribute("href") !== "#instructions") {
-                link.setAttribute("href", "index.html");
+        // If equal or bigger, show only "instructions" and "index" links
+        overlayNavLinks.forEach((link) => {
+            const showLinks = link.getAttribute("href");
+            if (showLinks === "#instructions" || showLinks === "index.html") {
+                link.style.display = "block";
+            } else {
+                link.style.display = "none";
             }
         });
     } else {
         // If smaller, set href of navigation their original values
-        navLinks[0].setAttribute("href", "#instructions");
-        navLinks[1].setAttribute("href", "#vst");
-        navLinks[2].setAttribute("href", "#fuel-consumption");
-        navLinks[3].setAttribute("href", "#currency-calculator");
-        navLinks[4].setAttribute("href", "#co2-footprint");
-        navLinks[5].setAttribute("href", "index.html");
+        navLinks.forEach((link) => {
+            link.style.display = "block";
+        });
     }
 }
+
+// Add click event listener to each overlay-nav-link
+navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        const href = this.getAttribute("href");
+        // Check if the clicked link href is "index.html" or "#instructions"
+        if (href === "index.html" || href === "#instructions") {
+            if (href === "index.html") {
+                // If it is, reload page for index.html
+                location.reload();
+            } else {
+                // Prevent default action for "#instructions"
+                event.preventDefault();
+
+                // Hide all sections
+                hideAllSections();
+
+                // Show the selected section
+                showSection(href);
+
+                // Hide the modal menu
+                document.getElementById("modal-menu").style.display = "none";
+
+                // Reset blur effect to content behind modal menu to hidden
+                document.getElementById("blur-content").classList.remove("active");
+            }
+        }
+    });
+});
 
 // Call updateNavLinks when the window is resized
 window.addEventListener("resize", updateNavLinks);
