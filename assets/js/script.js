@@ -425,3 +425,13 @@ function CalculateTravelCost() {
 
 // Event listener for reset button to execute resetCostFields
 document.getElementById("reset-btn-cost").addEventListener("click", resetTravelCostFields);
+
+/**
+ * Function to reset fuel cost calculator input fields
+ */
+function resetTravelCostFields() {
+    document.getElementById("distance-fuel-field").value = "0.00";
+    document.getElementById("distance-consumption-field").value = "0.00";
+    document.getElementById("price-per-unit-field").value = "0.00";
+    document.getElementById("cost-fuel-field").value = "0.00";
+}
