@@ -130,9 +130,9 @@ window.addEventListener("load", updateNavLinks);
  * Function to reset all travel time input fields
  */
 function resetTravelTimeFields() {
-    document.getElementById("velocity-field").value = "0.00";
-    document.getElementById("distance-field").value = "0.00";
-    document.getElementById("time-field").value = "0h 0m";
+    document.getElementById("velocity-field").value = "1.00";
+    document.getElementById("distance-field").value = "1.00";
+    document.getElementById("time-field").value = "1h 0m";
 }
 
 /**
@@ -225,6 +225,7 @@ document.getElementById("unit-select").addEventListener("change", function () {
     const unit = this.value;
     const velocityField = document.getElementById("velocity-field");
     const distanceField = document.getElementById("distance-field");
+    const timeField = document.getElementById("time-field");
     const velocity = parseFloat(velocityField.value);
     let distance = parseFloat(distanceField.value);
     const conversion = 0.621371; // Conversion factor from kilometers to miles
@@ -245,8 +246,7 @@ document.getElementById("unit-select").addEventListener("change", function () {
     }
 
     const time = distance / velocity;
-
-    document.getElementById("time-field").value = time.toFixed(2);
+    timeField.value = formatHoursAndMinutes(time);
 });
 
 /**
