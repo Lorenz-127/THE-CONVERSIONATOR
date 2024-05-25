@@ -71,8 +71,9 @@ Link to [responsive Mockup]()
 ## Design  
 
 ### Colour Scheme
+- The idea for this colour scheme was to choose a bright theme this time. There are also some additional colours, e.g. for shadows, borders and other indicators that are not in the main palette. 
 
-![colour palette]()
+![colour palette](assets/feature-img/colour-palette-light.png)
 
 ### Typography
 
