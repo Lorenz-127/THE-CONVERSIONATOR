@@ -38,7 +38,7 @@ infoBtn.addEventListener("click", function () {
 
     // Show instructions section
     openInstructionSection();
-})
+});
 
 /**
  * Function to open the Instructions via circle-question icon
