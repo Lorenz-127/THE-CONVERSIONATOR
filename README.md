@@ -149,6 +149,17 @@ Link to [responsive Mockup]()
 
 ### Unfixed Bugs
 
+#### Navigation
+- M-Issue-01: The links to the individual calculators do not work in the mobile view. The blur effect shifts when clicking on the links.
+- M-Issue-02: The links in the instruction section do not work in the mobile view.
+
+#### Calculators
+
+##### Travel Time
+- TT-Issue-01: If the user selects miles as the start calculation, the conversion is incorrect. If he sets the selection to km and back to mi, the result is correct.
+
+#### Navigation
+
 ## Technologies Used
 
 **Github** - Used for storage of my site and for publishing online.\
