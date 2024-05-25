@@ -244,12 +244,14 @@ To clone the the repository:
 ### Acknowledgements
 
 - My Peers in various Code Institute's Slack channels for their feedback and support.
-- All the great videos that are periodically posted by slack-bot in the various channels (You're a legend!)
+- All the great videos that are periodically posted by slack-bot in the various channels (You're a legend!).
+- Erik_4P_Lead for his advice and tips. 
 
 ### Honourable mentions
 
-- I would like to thank my mentor Luke Buchanan, who adapted on the spot to my learning pace.
+- I would like to thank my mentor Luke Buchanan, for great feedback and advice.
 
 - Vernell for his valuable and patient advice and tips to find the right path for solution. [LinkedIn](https://www.linkedin.com/in/vernellclark/) [GitHub](https://github.com/VCGithubCode)
 
 [Top](#contents)
+
