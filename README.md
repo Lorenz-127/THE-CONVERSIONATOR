@@ -76,10 +76,14 @@ Link to [responsive Mockup]()
 ![colour palette](assets/feature-img/colour-palette-light.png)
 
 ### Typography
+- The fonts for this project are from google fonts.
+  - The title font is "Alfa Slab One" serif
 
-  ![Montserrat]()
+  ![Alfa Slab One](assets/feature-img/font-title.png)
 
-  ![Work-Sans]()
+  - The content font is "Lato" sans-serif
+
+  ![Lato](assets/feature-img/font-text.png)
 
 [Top](#contents)
 
