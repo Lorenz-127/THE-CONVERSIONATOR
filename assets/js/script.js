@@ -21,13 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Add even listener to ID "open-instructions"
+// Add variable for event listener to ID "open-instructions"
 const infoBtn = document.getElementById("open-instructions");
-// Add even listener to links in overlay section
+// Add variable for event listener to links in overlay section
 const overlayNavLinks = document.querySelectorAll(".overlay-nav-links a");
-// Add even listener to links in instructions section
-const instructionsNavLinks = document.querySelectorAll(".instructions-wrapper a");
-// Add even listener to links in both overlay-nav-link and instructions-wrapper sections 
+// Add variable for event listener to links in both overlay-nav-link and instructions-wrapper sections 
 const navLinks = document.querySelectorAll(".overlay-nav-links a, .instructions-wrapper a");
 
 
