@@ -194,12 +194,12 @@ Link to [responsive Mockup]()
 
 ## Deployment
 
-The site is deployed using GitHub Pages - [pp2](https://lorenz-127.github.io/pp2/)
+The site is deployed using GitHub Pages - [THE-CONVERSIONATOR](https://lorenz-127.github.io/THE-CONVERSIONATOR/)
 
 To Deploy the site using GitHub Pages by following these steps:
 
 1. Login (or signup) to Github.
-2. Go to the repository for this project, [lorenz-127/pp2](https://github.com/Lorenz-127/pp2).
+2. Go to the repository for this project, [lorenz-127/THE-CONVERSIONATOR](https://github.com/Lorenz-127/THE-CONVERSIONATOR).
 3. Click the settings button.
 4. Select pages in the left hand navigation menu.
 5. From the source dropdown select main branch and press save.
@@ -212,7 +212,7 @@ To Deploy the site using GitHub Pages by following these steps:
 To fork the repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, [lorenz-127/pp2](https://github.com/Lorenz-127/pp2)
+2. Go to the repository for this project, [lorenz-127/THE-CONVERSIONATOR](https://github.com/Lorenz-127/THE-CONVERSIONATOR)
 3. Click the Fork button in the top right corner.
 
 ### How to Clone
@@ -220,7 +220,7 @@ To fork the repository:
 To clone the the repository:
 
 1. Log into your account on github
-2. Go to the repository of this project [lorenz-127/pp2](https://github.com/Lorenz-127/pp2)
+2. Go to the repository of this project [lorenz-127/THE-CONVERSIONATOR](https://github.com/Lorenz-127/THE-CONVERSIONATOR)
 3. Click on the code button, and copy your preferred clone link.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal, paste the link you copied in step 3 and press enter.
