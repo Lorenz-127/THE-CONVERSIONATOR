@@ -236,7 +236,10 @@ To clone the the repository:
 [Top](#contents)
 
 ### Content
-
+- The text on the website is written entirely by me. However, I have used [deepl.com](https://www.deepl.com/translator) for some parts of the translation.
+- For some coding questions, I used Co-Pilot as an assistant, which is provided by the CI GitHub Student Pack.
+- Most of my JavaScript questions was answered by [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- The inspration for the Modal Overlay Menu i took from [W3schools](https://www.w3schools.com/howto/howto_js_curtain_menu.asp)
 
 ### Acknowledgements
 
