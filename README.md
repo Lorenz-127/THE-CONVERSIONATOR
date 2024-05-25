@@ -165,14 +165,13 @@ Link to [responsive Mockup]()
 **Github** - Used for storage of my site and for publishing online.\
 **Gitpod** - The IDE used for editing my site and pushing changes.\
 **Python** - Used python 3 via terminal to preview my site using a local http server.\
-**HTML5** - The core of the site was built with HTML version 5.\
+**HTML** - The core of the site was built with HTML version 5.\
 **CSS** - CSS was used to style the website and define fonts and layout.\
 **JavaScript** - JavaScript was used for the logic elements on the website.\
-**Youtube** - Videos embedded from Youtube.\
-**Font Awesome** - Social Media icons from Font Awesome.\
-**Google Chrome** - The website was built and tested in google Chrome.\
-**TinyPNG Website** - Used to compress images so they load faster.\
-**Favicon Generator Website** - Converted PNG file that I made from the logo using photoshop and converted it into a favicon on website favicon.io\
+**Font Awesome** - icons are from Font Awesome.\
+**Cloudflare** - I use Cloudflare as a library-host for the Font Awesome.\
+**Google Chrome** - The website was tested in google Chrome dev tools.\
+**Favicon Generator Website** - The favicon was made by favicon.io\
 
 
 ### Languages Used
