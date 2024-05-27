@@ -167,6 +167,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
+  /**
+   * Function to handle navigation on large screens
+   */
+  function handleLargeScreen() {
+    handleInstructionLinks();
+    const navLinks = document.querySelectorAll(".overlay-nav-links li");
+    navLinks.forEach((link) => {
+      const href = link.querySelector("a").getAttribute("href");
+      if (href !== "index.html" && href !== "#instructions") {
+        link.style.display = "none";
+      } else {
+        link.style.display = "block";
+      }
+    });
   
     // Check if the instructions section is open
     const instructionSection = document.getElementById("instructions");
@@ -175,6 +189,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
+  /**
+   * Function to handle navigation on small screens
+   */
+  function handleSmallScreen() {
+    const navLinks = document.querySelectorAll(".overlay-nav-links li");
+  
+    navLinks.forEach((link) => {
+      link.style.display = "block";
+    });
+  
+    if (lastClickedLink) {
+      hideAllSections();
+      showSection(lastClickedLink);
+    }
+  }
   
   /**
    * Function to handle clicks on instruction links
