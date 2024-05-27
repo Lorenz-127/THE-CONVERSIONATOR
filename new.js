@@ -68,6 +68,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
+  /**
+   * Function to add click event listeners to each overlay navigation link.
+   */
+  function initializeNavLinks() {
+    const navLinks = document.querySelectorAll(".overlay-nav-links li");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", handleNavLinkClick);
+    });
+  }
+  
+  
+  // Variable to initialize the modal menu
+  let modalMenu = initializeModalMenu();
+  // Variable to store the last clicked link
+  let lastClickedLink = null;
+  
+  /**
+   * Function to handle the click event on the navigation links
+   */
+  function handleNavLinkClick(event) {
+    const href = this.querySelector("a").getAttribute("href");
+    lastClickedLink = href;
+    if (href === "index.html" || href === "#instructions") {
+      if (href === "index.html") {
+        location.reload();
+      } else {
+        event.preventDefault();
+        hideAllSections();
+        showSection(href);
+      }
+    }
+    closeModal(modalMenu.modal, modalMenu.blurContent);
+    updateNavLinks();
+  }
+  
   
     // Check if the instructions section is open
     const instructionSection = document.getElementById("instructions");
