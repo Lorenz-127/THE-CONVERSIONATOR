@@ -103,11 +103,64 @@ document.addEventListener("DOMContentLoaded", function () {
     updateNavLinks();
   }
   
+  /**
+   * Function to update the navigation links based on screen size
+   */
+  function updateNavLinks() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 992) {
+      handleLargeScreen();
+    } else {
+      handleSmallScreen();
+    }
+  }
+  
+  /**
+   * Function to handle instruction section links
+   */
+  function handleInstructionLinks() {
+    const navLinks = document.querySelectorAll(".overlay-nav-links li");
+  
+    navLinks.forEach((link) => {
+      const href = link.querySelector("a").getAttribute("href");
+      if (href === "#instructions") {
+        link.style.display = "block";
+      } else {
+        link.style.display = "none";
+      }
+    });
+  }
+  
   
     // Check if the instructions section is open
     const instructionSection = document.getElementById("instructions");
     if (instructionSection && instructionSection.style.display !== "grid") {
       showAllCalculators();
     }
+  }
+  
+  
+  /**
+   * Function to handle clicks on instruction links
+   */
+  function handleInstructionLinkClicks() {
+    const instructionLinks = document.querySelectorAll(".instructions-wrapper a");
+    instructionLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const href = link.getAttribute("href");
+        if (window.innerWidth < 992) {
+          hideAllSections();
+          showSection(href);
+        } else {
+          // Close the instructions section
+          const instructionSection = document.getElementById("instructions");
+          if (instructionSection) {
+            instructionSection.style.display = "none";
+          }
+          showAllCalculators();
+        }
+      });
+    });
   }
   
