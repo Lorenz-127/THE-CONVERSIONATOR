@@ -57,6 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
+  /**
+   * Function to hide all sections.
+   */
+  function hideAllSections() {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      section.style.display = "none";
+    });
+  }
   
   /**
    * Function to open the instructions section.
@@ -78,6 +87,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
+  /**
+   * Function to show selected section
+   */
+  function showSection(href) {
+    const targetSection = document.querySelector(href);
+    if (targetSection) {
+      targetSection.style.display = "grid";
+    }
+  }
+  
+  /**
+   * Function to show all calculator sections
+   */
+  function showAllCalculators() {
+    const calculators = [
+      "#vst",
+      "#fuel-consumption",
+      "#currency-calculator",
+      "#co2-footprint",
+    ];
+    calculators.forEach((calculator) => {
+      const section = document.querySelector(calculator);
+      if (section) {
+        section.style.display = "grid";
+      }
+    });
+  }
   
   // Variable to initialize the modal menu
   let modalMenu = initializeModalMenu();
