@@ -366,7 +366,7 @@ option {
     font-weight: 600;
 }
 
-#close-modal {
+#close-modal-menu {
     position: absolute;
     top: 3rem;
     right: 2rem;
