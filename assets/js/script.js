@@ -150,7 +150,7 @@ function calculateCurrency() {
     );
 
     if (isNaN(amount) || amount <= 0) {
-        document.getElementById("currency-destination-field").value = "";
+        document.getElementById("currency-destination-field").value = "0.00";
         return;
     }
 
