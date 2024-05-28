@@ -217,7 +217,7 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 - **Github**   - I GitHub for the storage of my site and Gitpages to publish my website.
 - **Balsamiq** - Balsamiq was the choice for the wireframes.
 - **MS-Paint** - MS-Paint for some of my image resizing.
-- **VS-Code**  - VS-Code Destop for various testing on a save playground.
+- **VS-Code**  - VS-Code Desktop for various testing on a save playground.
 - **Slack**    - Slack to communicate with my Mentor, Peers and get some help and infos.
 
 [Top](#contents)
@@ -265,19 +265,22 @@ To clone the the repository:
 
 ### JavaScript
 
+- Some of the functions are adaptations of the various lessons taught by CI's own LMS.
+- Most of my JavaScript questions was answered by [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- For harder coding questions, I used Co-Pilot as an assistant, which is provided by the CI GitHub Student Pack.
+
 [Top](#contents)
 
 ### Content
 - The text on the website is written entirely by me. However, I have used [deepl.com](https://www.deepl.com/translator) for some parts of the translation.
-- For some coding questions, I used Co-Pilot as an assistant, which is provided by the CI GitHub Student Pack.
-- Most of my JavaScript questions was answered by [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- The inspration for the Modal Overlay Menu i took from [W3schools](https://www.w3schools.com/howto/howto_js_curtain_menu.asp)
+- The inspiration for the Modal Overlay Menu I got from [W3schools](https://www.w3schools.com/howto/howto_js_curtain_menu.asp)
 
 ### Acknowledgements
 
 - My Peers in various Code Institute's Slack channels for their feedback and support.
-- All the great videos that are periodically posted by slack-bot in the various channels (You're a legend!).
-- Erik_4P_Lead for his advice and tips. 
+- All the great videos that are periodically posted by slack-bot in the various channels (**You're a legend!**).
+- Erik_4P_Lead for his advice and tips in early production process. [LinkedIn](https://www.linkedin.com/in/erikas-ramanauskas-full-stack-developer/) [GitHub](https://github.com/Erikas-Ramanauskas)
+- Tomáš_Kubánčik_Alumni_lead For additional advice on solving JavaScript bugs. [LinkedIn](https://www.linkedin.com/in/tomas-kubancik/) [GitHub](https://github.com/tomik-z-cech)
 
 ### Honourable mentions
 
