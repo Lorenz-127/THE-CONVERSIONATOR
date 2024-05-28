@@ -43,8 +43,8 @@ document.addEventListener("input", function (event) {
     // Validate the input to ensure it is a non-negative number
     if (!notNegativeNumber(inputValue)) {
         alert("Please enter a valid, non-negative number.");
-        event.target.value = "";  // Clear the invalid input
-        return;  // Exit the function if input is invalid
+        event.target.value = ""; // Clear the invalid input
+        return; // Exit the function if input is invalid
     }
 
     // Determine which calculation to trigger based on the input field ID
