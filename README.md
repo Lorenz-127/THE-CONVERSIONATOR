@@ -146,9 +146,37 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Existing Features
 
-### Feature 1
+### Travel Time
+  - Calculates your estimated traveling time by entering your speed and the desired distance.
 
-### Feature 2
+![Travel Time](assets/feature-img/travel-time.png)
+
+### Currency Calculator
+  - Calculates your foreign currency for euros, pounds sterling and US dollars.
+
+![Currency Calculator](assets/feature-img/currency-calc.png)
+
+### Travel Cost
+  - Calculates the cost of your journey by entering the distance, fuel consumption and fuel costs.
+
+![Travel Cost](assets/feature-img/travel-cost.png)
+
+### CO₂ Footprint
+  - Calculates how big the ecological footprint of the journey will be. 
+
+![CO₂ Footprint](assets/feature-img/co2-calc.png)
+
+### Menu Icons
+- The classic burger menu opens the modal with the navigation.
+
+![Menu Icons](assets/feature-img/menu-icons.png)
+
+### Reset Buttons
+- The Reset button resets the input of the fields.
+
+![Reset Buttons](assets/feature-img/reset-btn.png)
+
+
 
 [Top](#contents)
 
