@@ -87,25 +87,25 @@ Link to [responsive Mockup]()
 
 [Top](#contents)
 
-### Wireframes  
+### Wireframes 
 
 #### Lofi Design
 
-#### Home 
+#### Home
 
-![wire-desktop-large]()
+- Desktop
+  - Screensize 992px and larger
 
-- Desktop basic
-
-![wire-desktop-basic]()
+![Wireframe-Destop](assets/feature-img/wf-desktop-pp2.png)
 
 - Tablet
 
 ![wire-tablet]()
 
 - Mobile
+ - Screensize 375px 
 
-![wire-mobile]()
+![wire-mobile](assets/feature-img/wf-mobile-pp2.png)
 
 [Top](#contents)
 
