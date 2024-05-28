@@ -14,14 +14,34 @@ function replaceCommaWithDot(number) {
     return String(number).replace(",", ".");
 }
 
+/**
+ * Function to validate input is not a negative number
+ */
+function notNegativeNumber(input) {
+    // Replace comma with dot for German users before validation
+    input = replaceCommaWithDot(input);
+    // Check if the input is a number and not negative
+    return !isNaN(input) && Number(input) >= 0;
+}
+
 // Add event listener to initialize calculations on input change
 document.addEventListener("input", function (event) {
     const inputFieldId = event.target.id;
+    let inputValue = event.target.value;
 
     // Replace commas with dots
-    if (event.target.value.includes(",")) {
-        event.target.value = replaceCommaWithDot(event.target.value);
+    if (inputValue.includes(",")) {
+        inputValue = replaceCommaWithDot(inputValue);
+        event.target.value = inputValue;
     }
+
+    // Validate the input to ensure it is a non-negative number
+    if (!notNegativeNumber(inputValue)) {
+        alert("Please enter a valid, non-negative number.");
+        event.target.value = "";  // Clear the invalid input
+        return;  // Exit the function if input is invalid
+    }
+
     // Determine which calculation to trigger based on the input field ID
     if (
         ["velocity-field", "distance-field", "time-field"].includes(inputFieldId)
