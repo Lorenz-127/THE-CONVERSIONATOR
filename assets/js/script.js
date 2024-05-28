@@ -25,7 +25,7 @@ function notNegativeNumber(input) {
 }
 
 // Add event listener to initialize calculations on input change
-document.addEventListener("input", function(event) {
+document.addEventListener("input", function (event) {
     // Ensure the event target is an input element
     if (event.target.tagName.toLowerCase() !== 'input') {
         return;
