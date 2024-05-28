@@ -99,8 +99,9 @@ Link to [responsive Mockup]()
 ![Wireframe-Destop](assets/feature-img/wf-desktop-pp2.png)
 
 - Tablet
+  - Screensize 768px
 
-![wire-tablet]()
+![wire-tablet](assets/feature-img/wf-tablet-pp2.png)
 
 - Mobile
  - Screensize 375px 
