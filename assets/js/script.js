@@ -291,7 +291,7 @@ function resetCo2Fields() {
 /**
  * Function to calculate travel cost
  */
-function CalculateTravelCost() {
+function calculateTravelCost() {
     const distanceCost = getParsedValue("distance-fuel-field");
     const consumptionCost = getParsedValue("distance-consumption-field");
     const pricePerUnit = getParsedValue("price-per-unit-field");
