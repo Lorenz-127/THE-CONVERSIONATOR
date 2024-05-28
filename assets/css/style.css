@@ -102,9 +102,23 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
     padding-top: 8px;
-    height: 50px;
-    width: 100%;
+    height: 40px;
+    width: 70%;
+    border-top: 1px solid var(--clr-overlay);
+}
+
+.footer-container {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.5rem;
 }
 
 /* MARK: Utilities */
