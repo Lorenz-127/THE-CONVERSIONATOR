@@ -25,7 +25,7 @@ function notNegativeNumber(input) {
 }
 
 // Add event listener to initialize calculations on input change
-document.addEventListener("input", function (event) {
+document.addEventListener("input-field", function (event) {
     const inputFieldId = event.target.id;
     let inputValue = event.target.value;
 
