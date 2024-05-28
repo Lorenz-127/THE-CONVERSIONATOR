@@ -27,7 +27,7 @@ function initializeModalMenu() {
 }
 
 /**
- * Open the modal menu.
+ * Function to open the modal menu.
  */
 function openModal(modal, blurContent) {
   modal.style.display = "block";
@@ -36,7 +36,7 @@ function openModal(modal, blurContent) {
 }
 
 /**
- * Close the modal menu.
+ * Function to close the modal menu.
  */
 function closeModal(modal, blurContent) {
   modal.style.display = "none";
@@ -58,7 +58,7 @@ function initializeInstructionButton() {
 }
 
 /**
- * Hides all sections.
+ * Function to hide all sections.
  */
 function hideAllSections() {
   const sections = document.querySelectorAll("section");
@@ -68,7 +68,7 @@ function hideAllSections() {
 }
 
 /**
- * Opens the instructions section.
+ * Function to opens the instructions section.
  */
 function openInstructionSection() {
   const instructionSection = document.getElementById("instructions");
@@ -115,7 +115,7 @@ function showAllCalculators() {
   });
 }
 
-// Initialize the modal menu
+// variable to initialize the modal menu
 let modalMenu = initializeModalMenu();
 // variable to store the last clicked link
 let lastClickedLink = null;
