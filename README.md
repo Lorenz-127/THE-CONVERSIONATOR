@@ -182,9 +182,22 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Accessibility
 
+- I used alt="", aria-labels and semantic elements like as much as possible to make the site easy to navigate and understand by keyboard and/or screen reader users.
+
+- The overlay menu closes by click, with ESC, or backspace key, all fields can be accessed using the tab key.
+
+- The fields update themselves automatically as soon as the required parameters are entered. Therefore, an additional action such as pressing the enter key or clicking a calculate button is not necessary.
+
 ### Features Left to Implement
 
-#### Feature 1
+- API access for the currency calculator
+
+- Google map integration for traffic forecast
+
+- Weather app to forecast the conditions for your journey.
+
+- Theme toggle that the user can switch between dark and light mode.
+
 
 [Top](#contents)
 
