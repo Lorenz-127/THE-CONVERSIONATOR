@@ -25,7 +25,12 @@ function notNegativeNumber(input) {
 }
 
 // Add event listener to initialize calculations on input change
-document.addEventListener("input-field", function (event) {
+document.addEventListener("input", function(event) {
+    // Ensure the event target is an input element
+    if (event.target.tagName.toLowerCase() !== 'input') {
+        return;
+    }
+
     const inputFieldId = event.target.id;
     let inputValue = event.target.value;
 
@@ -43,25 +48,16 @@ document.addEventListener("input-field", function (event) {
     }
 
     // Determine which calculation to trigger based on the input field ID
-    if (
-        ["velocity-field", "distance-field", "time-field"].includes(inputFieldId)
-    ) {
+    if (["velocity-field", "distance-field", "time-field"].includes(inputFieldId)) {
         calculateTimeForDistance();
-    } else if (
-        ["distance-fuel-field", "distance-consumption-field", "price-per-unit-field", ].includes(inputFieldId)
-    ) {
-        CalculateTravelCost();
-    } else if (
-        ["currency-origin", "currency-origin-field", "currency-destination", ].includes(inputFieldId)
-    ) {
+    } else if (["distance-fuel-field", "distance-consumption-field", "price-per-unit-field"].includes(inputFieldId)) {
+        calculateTravelCost();
+    } else if (["currency-origin", "currency-origin-field", "currency-destination"].includes(inputFieldId)) {
         calculateCurrency();
-    } else if (
-        ["transportation-mode", "fuel-type", "distance-co2-footprint-field", ].includes(inputFieldId)
-    ) {
+    } else if (["transportation-mode", "fuel-type", "distance-co2-footprint-field"].includes(inputFieldId)) {
         calculateCO2Footprint();
     }
 });
-
 // Event listener for reset button to execute resetTravelTimeFields
 document
     .getElementById("reset-btn-time")
