@@ -4,9 +4,9 @@
 
 ### The live link can be found here - [THE-CONVERSIONATOR](https://lorenz-127.github.io/THE-CONVERSIONATOR/)
 
-![Responsive Mockup]()
+![Responsive Mockup](assets/feature-img/responsive-large.png)
 
-Link to [responsive Mockup]()
+Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.github.io/THE-CONVERSIONATOR/index.html)
 ---
 ## CONTENTS
 
@@ -114,11 +114,31 @@ Link to [responsive Mockup]()
 
 ### Header
 
+![header](assets/feature-img/header-large.png)
+
 ### Footer
+
+![footer](assets/feature-img/footer-large.png)
 
 ### Home
 
-### JavaScript
+![home](assets/feature-img/home.png)
+
+### Instructions
+
+![instructions](assets/feature-img/instructions.png)
+
+### Overlay Desktop
+
+![overlay](assets/feature-img/overlay-large.png)
+
+### Mobile
+
+![overlay](assets/feature-img/mobile.png)
+
+### Overlay Mobile
+
+![overlay](assets/feature-img/mobile-overlay.png)
 
 [Top](#contents)
 
@@ -157,14 +177,20 @@ Link to [responsive Mockup]()
 
 #### Navigation
 - M-Issue-01: The links to the individual calculators do not work in the mobile view. The blur effect shifts when clicking on the links.
+  - Solution:
 - M-Issue-02: The links in the instruction section do not work in the mobile view.
+  - Solution:
 
 #### Calculators
+- S-Issue-01: The input field allow to typed letter into any of the calculators.
+  - Solution:
+- S-Issue-02: Minus numbers are possible to input into the calculators.
+  - Solution:
+- S-Issue-02: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
+  - Solution:
 
 ##### Travel Time
 - TT-Issue-01: If the user selects miles as the start calculation, the conversion is incorrect. If he sets the selection to km and back to mi, the result is correct.
-
-#### Navigation
 
 ## Technologies Used
 
