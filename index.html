@@ -78,7 +78,7 @@
                                 Velocity:
                             </label>
                             <input id="velocity-field" class="input-field" type="text"
-                                aria-label="Velocity in km/h or mi/h" value="1.00" pattern="\d+(\.\d{1,2})?">
+                                aria-label="Velocity in km/h or mi/h" value="1.00" min="0" step="0.5">
                             <span class="units-vst-v">km/h</span>
                         </div>
                         <div class="input-container">
@@ -86,7 +86,7 @@
                                 Distance:
                             </label>
                             <input id="distance-field" class="input-field" type="text" aria-label="Distance in km"
-                                value="1.00" pattern="\d+(\.\d{1,2})?"><span class="units-vst-d">km</span>
+                                value="1.00" min="0" step="0.5"><span class="units-vst-d">km</span>
                         </div>
                         <div class="output-container">
                             <label for="time-field">
@@ -113,14 +113,14 @@
                             <label for="distance-fuel-field">
                                 Travel Distance:
                             </label>
-                            <input id="distance-fuel-field" class="input-field" type="text" value="0.00">
+                            <input id="distance-fuel-field" class="input-field" type="text" value="0.00" min="0" step="0.5">
                             <span class="units">km|mi</span>
                         </div>
                         <div class="input-container">
                             <label for="distance-consumption-field">
                                 Fuel Consumption:
                             </label>
-                            <input id="distance-consumption-field" class="input-field" type="text" value="0.00">
+                            <input id="distance-consumption-field" class="input-field" type="text" value="0.00" min="0" step="0.5">
                             <span class="units">l/100km|mi</span>
                         </div>
                         <!-- Output fields for price per unit and cost -->
@@ -128,7 +128,7 @@
                             <label for="price-per-unit-field">
                                 Price per unit of fuel:
                             </label>
-                            <input id="price-per-unit-field" class="input-field" type="text" value="0.00">
+                            <input id="price-per-unit-field" class="input-field" type="text" value="0.00" min="0" step="0.5">
                             <span class="units">€|$|£/l</span>
                         </div>
                         <div class="output-container">
@@ -168,8 +168,7 @@
                                 <label for="currency-origin-field">
                                     Origin:
                                 </label>
-                                <input id="currency-origin-field" class="input-field" type="text" value="0.00"
-                                    pattern="\d+(\.\d{1,2})?">
+                                <input id="currency-origin-field" class="input-field" type="text" value="0.00" min="0" step="0.5">
                                 <span class="units">€|$|£</span>
                             </div>
                         </div>
@@ -238,7 +237,7 @@
                             <label for="distance-co2-footprint-field">
                                 Distance:
                             </label>
-                            <input id="distance-co2-footprint-field" class="input-field" type="text" value="0.00">
+                            <input id="distance-co2-footprint-field" class="input-field" type="text" value="0.00" min="0" step="0.5">
                             <span class="units-co2-d">km</span>
                         </div>
                         <!-- Output field for displaying CO₂ footprint -->
