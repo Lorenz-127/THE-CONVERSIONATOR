@@ -208,7 +208,58 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Bug Fixes in the Production Process
 
-### Bug Fixes through after validation
+#### Navigation
+
+- M-Issue-01: The links to the individual calculators do not work in the mobile view. The blur effect shifts when clicking on the links.
+  - Solution:
+- M-Issue-02: The links in the instruction section do not work in the mobile view.
+  - Solution:
+
+#### Script
+
+- S-Issue-01: The input field allow to typed letter into any of the calculators.
+  - Solution:
+
+- S-Issue-02: Minus numbers are possible to input into the calculators.
+  - Solution:
+
+- S-Issue-04: Function to calculate travel cost is not working
+
+![S-Issue-04](assets/feature-img/error-travel-cost.png)
+
+  - Solution: Add correct syntax for function name in camelCase
+
+![S-Issue-04-solution](assets/feature-img/error-travel-cost-solution.png)
+
+### Bug Fixes through/after validation
+
+- **Error-1** Duplicate attribute 
+
+![Duplicate attribute](assets/feature-img/duplicate-attribute.png)
+
+  - Solution: Move attribute "instructions-btn" inside existing class element and delete duplicated class element.
+
+![Duplicate attribute](assets/feature-img/duplicate-attribute-solution.png)
+
+- **Error-2+3** End tag section wrong indentation but there were open div element.
+
+![End tag section](assets/feature-img/end-tag-section.png)
+
+![End tag section](assets/feature-img/unclosed-element-div.png)
+
+  - Solution: Add forgotten end tag of DIV element. Correct indentation for section element.
+
+![forgotten end tag](assets/feature-img/end-tag-section-solution-0.png)
+
+![Correct indentation](assets/feature-img/end-tag-section-solution-1.png)
+
+- **Error-4~17** Element p not allowed as child of ul in this context.
+
+![p not allowed as child](assets/feature-img/element-p-not-allowed-as-child-of-ul.png)
+
+  - Solution: Change HTML Structure set div for ul and h5 for li elements see [Commit-File](https://github.com/Lorenz-127/THE-CONVERSIONATOR/commit/be44a4a6154b03abdf156646860f13987f858a76#diff-0eb547304658805aad788d320f10bf1f292797b5e6d745a3bf617584da017051L269-R325)
+
+![set div and h5](assets/feature-img/error-4to17-solution-small.png)
 
 ### Bug Fixes caused through changes after validation
 
@@ -216,22 +267,15 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Unfixed Bugs
 
-#### Navigation
-- M-Issue-01: The links to the individual calculators do not work in the mobile view. The blur effect shifts when clicking on the links.
-  - Solution:
-- M-Issue-02: The links in the instruction section do not work in the mobile view.
-  - Solution:
-
 #### Calculators
-- S-Issue-01: The input field allow to typed letter into any of the calculators.
-  - Solution:
-- S-Issue-02: Minus numbers are possible to input into the calculators.
-  - Solution:
-- S-Issue-02: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
-  - Solution:
 
 ##### Travel Time
-- TT-Issue-01: If the user selects miles as the start calculation, the conversion is incorrect. If he sets the selection to km and back to mi, the result is correct.
+
+- S-Issue-03: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
+  - Solution:
+
+- TT-Issue-01: If the user selects miles as the start calculation, the conversion is incorrect. 
+  - If he sets the selection to km and back to mi, the result is correct.
 
 ## Technologies Used
 
