@@ -1,13 +1,18 @@
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Get event listeners
+  // Get event listeners for functions
   initializeModalMenu();
   initializeInstructionButton();
   initializeNavLinks();
   handleInstructionLinkClicks();
   updateNavLinks();
+
+  // Add event listener to update navigation
   window.addEventListener("resize", updateNavLinks);
   window.addEventListener("load", updateNavLinks);
+
+  // Add key and click event listeners
+  document.addEventListener("keydown", handleKeyPress);
 });
 
 /**
@@ -24,6 +29,20 @@ function initializeModalMenu() {
     closeButton.addEventListener("click", () => closeModal(modal, blurContent));
   }
   return { modal, blurContent };
+}
+
+/**
+ * Function to close the modal on ESC and Backspace key press
+ */
+function handleKeyPress(event) {
+  const modal = document.getElementById("modal-menu");
+  const blurContent = document.getElementById("blur-content");
+
+  if (event.key === "Escape" || event.key === "Backspace") {
+    if (modal.style.display === "block") {
+      closeModal(modal, blurContent);
+    }
+  }
 }
 
 /**
