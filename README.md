@@ -2,6 +2,8 @@
 
 ## Introduction
 
+The Conversionator is your ultimate travel companion, helping you plan your trips efficiently and calculate costs as well as your CO₂ footprint.
+
 ### The live link can be found here - [THE-CONVERSIONATOR](https://lorenz-127.github.io/THE-CONVERSIONATOR/)
 
 ![Responsive Mockup](assets/feature-img/responsive-large.png)
@@ -43,28 +45,63 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Main Idea
 
+The idea behind the Conversionator is to quickly and clearly answer the most important questions when planning a trip with a vehicle.
+
+- How long will I need for the journey?
+- How much will the fuel cost me for the journey?
+- What is the exchange rate for the currency at my destination?
+- What is my ecological footprint for the journey?
+
+The app answers these four basic questions. The design is optimised for mobile devices from 375px and is therefore an ideal travel companion.
+
+
 ### Project Goal
+
+The aim of this project is to have a handy tool at hand for and on my journey to calculate the most important key data.\
+Such as traveling time, fuel costs, currency conversion and ecological footprint of my trip.
 
 ### Target Audience
 
+- People who are planning a trip or are on a trip.
+
 ### User Goals
 
+- As a user, I can get answers to my important travel questions quickly and easily.
+- I have all the information I need to use the app available in an intuitive way.
+- The app should be easy to use and also be able to be set up with alternative input methods, such as screen readers or keyboard input without a mouse.
+
 ### Site Owner Goals
+
+- As the operator of the app, I offer the user the opportunity to get answers to their most important questions about their trip quickly and easily.
+- I also have the opportunity to evaluate their data within the framework of the legal regulations and to inform them with targeted and needs-based advertising or offers.
 
 ### User stories
 
 - #### First-Time Visitor Goals
 
+  - As a first-time user of the app, I find my way around quickly and easily.
+
 - #### Returning Visitor Goals
 
+  - As a returning user of the app, I know how the app works and can specifically get the information I need for my current trip.
+
 - #### Frequent User Goals
+
+  - As a regular user of the app, I appreciate its benefits and will include it in my planning of my next trip.
 
 ### Owner Goals
+
 - #### First-Time Visitor Goals
+
+  - The first-time visitor finds the app appealing and the information provided helps him to quickly find his way around.
 
 - #### Returning Visitor Goals
 
+  - The returning user gives me the opportunity to evaluate their data and adapt my additional planned content to their needs.
+
 - #### Frequent User Goals
+
+  - Regular users of the app leave a positive review in the app store, thus attracting more customers.
 
 [Top](#contents)
 
@@ -104,7 +141,7 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 ![wire-tablet](assets/feature-img/wf-tablet-pp2.png)
 
 - Mobile
- - Screensize 375px 
+  - Screensize 375px 
 
 ![wire-mobile](assets/feature-img/wf-mobile-pp2.png)
 
@@ -114,29 +151,52 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Header
 
+- The design for the header is minimalist. The idea behind it is not to irritate the user with an overloaded header.\
+For this reason, I have also deliberately kept the menu icons simple.\
+The app's focus should be on the calculators and not on the navigation.
+
 ![header](assets/feature-img/header-large.png)
 
 ### Footer
+
+- I took the same approach with the footer.\
+The icons for the socials are simple and follow the design of the app. 
 
 ![footer](assets/feature-img/footer-large.png)
 
 ### Home
 
+- On screens larger than 992px, all 4 calculators are displayed in a grid layout.\
+This makes unnecessary scrolling obsolete and allows the user to interact seamlessly with the app.
+
 ![home](assets/feature-img/home.png)
 
 ### Instructions
+
+- Clicking on the question mark icon opens the instruction page, where the operation of the individual calculators is explained.\
+The calculators are displayed by selecting the title of the desired calculator.\
+This action should enable the user to navigate the page with as few clicks as possible.
+
+- The entire page and all elements can also be operated using the keyboard.
 
 ![instructions](assets/feature-img/instructions.png)
 
 ### Overlay Desktop
 
+- In the desktop version, the modal menu only shows the really necessary links to minimize distractions for the user.
+- The overlay menu closes by click on the prominent close icon, with ESC, or backspace key pressed.
+
 ![overlay](assets/feature-img/overlay-large.png)
 
 ### Mobile
 
+- On mobile devices, the user has the option of displaying the calculators either individually or all the calculators in one column.
+
 ![overlay](assets/feature-img/mobile.png)
 
 ### Overlay Mobile
+
+- In the mobile version of the modal, all links are displayed, as the user has the option of displaying the calculators individually.
 
 ![overlay](assets/feature-img/mobile-overlay.png)
 
@@ -168,6 +228,7 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Menu Icons
 - The classic burger menu opens the modal with the navigation.
+- The question mark icon opens the Instructions page.
 
 ![Menu Icons](assets/feature-img/menu-icons.png)
 
@@ -184,19 +245,24 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 - I used alt="", aria-labels and semantic elements like as much as possible to make the site easy to navigate and understand by keyboard and/or screen reader users.
 
+- All icons on the page scale by a factor of 1.7 when clicked to give the user visual feedback for their action.
+
 - The overlay menu closes by click, with ESC, or backspace key, all fields can be accessed using the tab key.
 
-- The fields update themselves automatically as soon as the required parameters are entered. Therefore, an additional action such as pressing the enter key or clicking a calculate button is not necessary.
+- The fields update themselves automatically as soon as the required parameters are entered.\
+Therefore, an additional action such as pressing the enter key or clicking a calculate button is not necessary.
 
 ### Features Left to Implement
 
-- API access for the currency calculator
+- API access for the currency calculator to get live conversion rates
 
-- Google map integration for traffic forecast
+- Integration of Google Maps for live traffic forecasts and route planning.
 
 - Weather app to forecast the conditions for your journey.
 
 - Theme toggle that the user can switch between dark and light mode.
+
+- Add login and registration to give users the opportunity to plan and manage trips in advance.
 
 
 [Top](#contents)
@@ -288,8 +354,9 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 #### Calculators
 
-##### Travel Time
+CC-Issue-1: Possibly add a switch currency button to swap the two currently in play
 
+##### Travel Time
 
 - S-Issue-03: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
 
