@@ -16,7 +16,7 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
   * [User Stories](#user-stories)
 
 * [Design](#design)
-  * [Colour Scheme](#colour-scheme)
+  * [Colours Scheme](#colour-scheme)
   * [Typography](#typography)
   * [Wireframes](#wireframes)
 
@@ -36,6 +36,7 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
     * [How to Clone](#how-to-clone)
 
 * [Testing](#testing)
+* [Refactor](#refactor)
 
 * [Credits](#credits)
   * [Content](#content)
@@ -126,22 +127,20 @@ Such as traveling time, fuel costs, currency conversion and ecological footprint
 
 ### Wireframes 
 
-#### Lofi Design
-
 #### Home
 
 - Desktop
-  - Screensize 992px and larger
+  - Screen size 992px and larger
 
-![Wireframe-Destop](assets/feature-img/wf-desktop-pp2.png)
+![Wireframe-Desktop](assets/feature-img/wf-desktop-pp2.png)
 
 - Tablet
-  - Screensize 768px
+  - Screen size 768px
 
 ![wire-tablet](assets/feature-img/wf-tablet-pp2.png)
 
 - Mobile
-  - Screensize 375px 
+  - Screen size 375px 
 
 ![wire-mobile](assets/feature-img/wf-mobile-pp2.png)
 
@@ -270,6 +269,10 @@ Therefore, an additional action such as pressing the enter key or clicking a cal
 ## Testing
 
 - ### [Link to testing.md](testing.md)
+
+## Refactor 
+
+- ### [Link to refactor.md](refactor.md)
 
 
 ### Bug Fixes in the Production Process
