@@ -1,15 +1,15 @@
 
 # Tests
 
-### Manual Testing
+## Manual Testing
 
   - [Lighthouse](#lighthouse)
   - [HTML](#html)
   - [External Testing](#external-testing)
 
-### Validator Testing
+## Validator Testing
 
-#### Home
+### Home
 
 - index.html
 
@@ -32,7 +32,7 @@
   - pass
 
 
-#### CSS
+### CSS
 
 ![jigsaw-css ](assets/feature-img/w3c-css-validation.png)
 
@@ -52,73 +52,66 @@
 
 ## External Testing
 
-Additional testing was taken by friends and family on a variety of devices and screen sizes.
+### **Testing via Google Chrome Developer Tools**
+- **Task :** To test the project for responsiveness in Google Chrome Developer Tools, to ensure correct `@media screen and (max-width: ... )` is enabled and all elements of the project are responding to changing view-port.
+- **Method :** Project was displayed via Google Chrome browser, Developer tools were opened and view-port size changed to different sizes.
+- **Expected result :** Project does response to min-width **375px** (mobile phones), width **650px** (small tablets), width **768px** (tablets), and max-with **992px** (laptop and up)
+- **Actual result :** Project is fully responsive to min-width **375px** (mobile phones), width **650px** (small tablets), width **768px** (tablets), and max-with **992px** (laptop and up)
 
-### Navbar
+[Top](#tests)
 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Title | When clicked the user will be redirected to the home page. | Clicked title | Redirected to the home page. | Pass |
-| Home Page Link | When clicked the user will be redirected to the home page.| Clicked link | Redirected to the home page. | Pass |
-| HTML Link | When clicked the user will be redirected to the home page.| Clicked link | Redirected to the home page. | Pass |
-| CSS Link | When clicked the user will be redirected to the home page.| Clicked link | Redirected to the home page. | Pass |
-| JavaScript Link | When clicked the user will be redirected to the home page.| Clicked link | Redirected to the home page. | Pass |
-| Quiz Link | When clicked the user will be redirected to the home page.| Clicked link | Redirected to the home page. | Pass |
-| Confirmation page | When clicked on the links the user will be redirected to respective page.| Clicked link | Redirected to the page. | Pass |
+### **Local testing by developer**
+- **Task :** To physically test the final project responsiveness on different devices with different view-ports.
+- **Method :** Project was tested on following devices : 
+  - Samsung A22 - mobile phone with small view-port 384px
+  - Samsung Galaxy S20Ultra - mobile phone with large view-port 412px
+  - Dell Laptop Latitude 3590 - Laptop with large view-port
+  - PC with resolution 1920px * 1080px (Full HD)  
+  - PC with resolution 2560px * 1440px (UHD)
+- **Expected result :** The project reacts on all devices without deviations.
+- **Actual result :**  No content is out of place on all devices above.
+- **Overall result :** Pass
+---
+- **Task :** Physical test of final project functionality.
+- **Method :** Project was tested in following applications : 
+  - Google Chrome
+  - Mozilla Firefox
+  - Microsoft Edge
+  - Opera
+  - Safari
+- **Expected result :** Project does all functions in all web browsers.
+- **Actual result :**  The content is not displayed incorrectly in any of the browsers listed, and the project retains its functionality, all navigation links work.
+- **Overall result :** Pass
+---
+- **Task :** Physical testing of navigation in all browsers and sizes.
+- **Method :** Test all navigation links and their behaviour, including scaling up on hover and displaying the correct content on click.
+- **Expected result :** All links show the expected behaviour and lead to the defined anchors.
+- **Actual result :**  The links lead to the defined targets and scale as expected.
+- **Overall result :** Pass
 
-### Burger button
+[Top](#tests)
 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Burger button tablet | When clicked the navbar wil slide in horizontal to the top center direct under the header. | Clicked  burger button | Slide horizontal to the top center. | Pass |
-| Burger button mobile | When clicked the navbar wil slide in vertical the top left under the header. | Clicked  burger button | Slide vertical the top left. | Pass |
+---
 
-### Navbar Link colours for HTML, CSS and JavaScript
+### **Physical testing by users**
+- **Task :** Testing the usability and finding possible bugs that are not already known and have been overlooked.
+- **Method :** The test group get access to published links on GitHub pages and send feedback after their test.
 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| HTML Link | When clicked the Link will show its HTML colour. | Clicked link | Show its HTML colour. | Pass |
-| CSS Link | When clicked the Link will show its CSS colour. | Clicked link | Show its CSS colour. | Pass |
-| JavaScript Link | When clicked the Link will show its JavaScript colour. | Clicked link | show its JavaScript colour. | Pass |
-
-### Footer
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Social Icons | When clicked the user will be redirected to the appropriate social media pages in a new window. | Clicked icon | Redirected to the social media page in a new window. | Pass |
-
-### Scroll button
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Scroll button top | When clicked the site will scroll to the top of the page. | Clicked arrow up | Scroll to the top. | Pass |
-| Scroll button bottom | When clicked the site will scroll to the bottom of the page. | Clicked arrow down | Scroll to the bottom. | Pass |
-
-### JavaScript Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Clock | Clock shows on tablet and up and is working | on page load | Clock shows on up and is working. | Pass |
-| Clock | Clock does not show on mobile | on page load | Clock does not show. | Pass |
-
-### Quiz Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Radio buttons Answer text | When clicked will show the correct answer colour | Clicked on the radio buttons or the answer text | Shows the correct colour for the answer | Pass |
-| Submit Form Name | When left the fields blank required message shows up | Let field blank | Required message shows up | Pass |
-| Submit Form Email | When left the fields blank required message shows up | Let field blank | Required message shows up | Pass |
-| Submit Form Email | When submit invalid Email format required message shows up | Use wrong Email format | Required message shows up | Pass |
-| Submit Form Dropdown | When fill out the fields required message shows up | Do not select | Required message shows up | Pass |
-| Submit Button | When button clicked redirect to confirmation page | Click button | Redirect to confirmation page | Pass |
-
-### Confirmation Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| YouTube video | Video does not autoplay only when clicked does it play. | Clicked video | Video plays | Pass |
-| 5dcc Button | When button clicked redirect to external CI 5dcc page | Click button | Redirect to external CI 5dcc page | Pass |
-| Blog Button | When button clicked redirect to external CI blog page | Click button | Redirect to external CI blog page | Pass |
+|User|Joshua B.|
+|--|--|
+| Feedback | All Calculators work as intended. The Currency Calculator could have a swap function |
+| Applied changes | Due to less then 24h until submission, the swap function on is on the added to "Features Left to Implement" List |
+---
+|User|Tina B.|
+|--|--|
+| Feedback given | The App was tested on mobile only and all calculators and links worked perfect. |
+| Applied changes | none. |
+---
+|User|Nicolas T. |
+|--|--|
+| Feedback given | The App works fine. It is possible to add spaces and infinite numbers to the input fields. |
+| Applied changes | Add additional validation to the input fields. [Commit](https://github.com/Lorenz-127/THE-CONVERSIONATOR/commit/da201b71ecb44d18b6da8694f88b6acb860026ba) |
+---
 
 </div>
 
