@@ -107,34 +107,19 @@ function calculateTimeForDistance() {
     timeField.value = formatHoursAndMinutes(time);
 }
 
-let originalDistanceKm; // Declare a variable to store the original distance in kilometers
-
+// Add event listener to select element to change units for better UX
 document.getElementById("unit-select").addEventListener("change", function () {
     const unit = this.value;
-    const velocityField = document.getElementById("velocity-field");
-    const distanceField = document.getElementById("distance-field");
-    const timeField = document.getElementById("time-field");
-    const velocity = parseFloat(velocityField.value);
-    let distance = parseFloat(distanceField.value);
-    const conversion = 0.621371; // Conversion factor from kilometers to miles
-
     if (unit === "mi") {
-        // Store the original distance in kilometers
-        originalDistanceKm = distance;
 
-        // Convert distance from km to mi
-        distance = distance * conversion;
+        // change units from km to mi
         document.querySelector(".units-vst-v").textContent = "mi/h";
         document.querySelector(".units-vst-d").textContent = "mi";
     } else {
-        // Use the original distance in kilometers
-        distance = originalDistanceKm;
+        // change units from min in kilometers
         document.querySelector(".units-vst-v").textContent = "km/h";
         document.querySelector(".units-vst-d").textContent = "km";
     }
-
-    const time = distance / velocity;
-    timeField.value = formatHoursAndMinutes(time);
 });
 
 /**
