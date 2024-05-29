@@ -374,7 +374,8 @@ Therefore, an additional action such as pressing the enter key or clicking a cal
 
 CC-Issue-1: Possibly add a switch currency button to swap the two currently in play
 
-##### Travel Time
+  - This bug does not prevent the currency calculator from working well.
+  - And due to lack of time until the project is due to be submitted, the fix is postponed.
 
 ## Technologies Used
 
