@@ -211,17 +211,26 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 #### Navigation
 
 - M-Issue-01: The links to the individual calculators do not work in the mobile view. The blur effect shifts when clicking on the links.
-  - Solution:
 - M-Issue-02: The links in the instruction section do not work in the mobile view.
-  - Solution:
+
+![M-Issue-01](assets/feature-img/M-Issue-01.png)
+
+  - Solution: The navigation for smaller screens was not functional.\
+  For this reason, I separated the code for the navigation from the main code for the calculators and completely rewrote it.\
+  I have documented this process separately [here]. 
+  The visual solution for the user can be seen in the following image.
+
+![M-Issue-01-solution](assets/feature-img/M-Issue-01-solution.png)
 
 #### Script
 
 - S-Issue-01: The input field allow to typed letter into any of the calculators.
-  - Solution:
-
 - S-Issue-02: Minus numbers are possible to input into the calculators.
-  - Solution:
+
+  - Solution: Add an alternative method for field validation in JavaScript, as the usual method is not possible due to the needed form input element type=‘text’.\
+  This is the case because the function to replace the comma in the output field with a dot, relies on a type=‘text’ attribute instead of an input type=‘number’.
+
+![S-Issue-01](assets/feature-img/s-issue-1~2-solution.png)
 
 - S-Issue-04: Function to calculate travel cost is not working
 
@@ -263,6 +272,16 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ### Bug Fixes caused through changes after validation
 
+**Error-V1** Attribute step not allowed on element input
+
+- This new error arose after the attempt to resolve the error S-Issue-1 + S-Issue-01.
+
+![Attribute step not allowed](assets/feature-img/attribut-not-allowed.png)
+
+  - Solution: Remove the attributes no longer required for input validation.
+
+![Attribute step not allowed solution](assets/feature-img/attribute-not-allowed-solution.png)
+
 [Top](#contents)
 
 ### Unfixed Bugs
@@ -271,11 +290,12 @@ Link to [responsive Mockup](https://ui.dev/amiresponsive?url=https://lorenz-127.
 
 ##### Travel Time
 
-- S-Issue-03: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
-  - Solution:
 
-- TT-Issue-01: If the user selects miles as the start calculation, the conversion is incorrect. 
-  - If he sets the selection to km and back to mi, the result is correct.
+- S-Issue-03: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
+
+![S-Issue-03](assets/feature-img/S-Issue-03.png)
+
+  - Solution:
 
 ## Technologies Used
 
