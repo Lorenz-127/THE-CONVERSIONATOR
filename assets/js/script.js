@@ -8,6 +8,22 @@ function resetTravelTimeFields() {
 }
 
 /**
+ * Function to validate input has no spaces and is within a specific length
+ */
+function validateInput(input, maxLength) {
+    // Check if the input contains any spaces
+    if (/\s/.test(input)) {
+        return false;
+    }
+    // Check the length of the input
+    if (input.length > maxLength) {
+        return false;
+    }
+    // Check whether the input contains only digits or decimal numbers
+    return /^\d*\.?\d*$/.test(input);
+}
+
+/**
  * Replace "," with "." for German users
  */
 function replaceCommaWithDot(number) {
@@ -40,9 +56,10 @@ document.addEventListener("input", function (event) {
         event.target.value = inputValue;
     }
 
-    // Validate the input to ensure it is a non-negative number
-    if (!notNegativeNumber(inputValue)) {
-        alert("Please enter a valid, non-negative number.");
+    // Validate the input to ensure it has no spaces, is within the allowed length, and is a non-negative number
+    const maxLength = 7;
+    if (!validateInput(inputValue, maxLength) || !notNegativeNumber(inputValue)) {
+        alert(`Please enter a valid, non-negative number with no spaces and up to ${maxLength} characters.`);
         event.target.value = ""; // Clear the invalid input
         return; // Exit the function if input is invalid
     }
@@ -58,6 +75,7 @@ document.addEventListener("input", function (event) {
         calculateCO2Footprint();
     }
 });
+
 // Event listener for reset button to execute resetTravelTimeFields
 document
     .getElementById("reset-btn-time")
