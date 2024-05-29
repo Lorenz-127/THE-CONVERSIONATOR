@@ -301,6 +301,21 @@ Therefore, an additional action such as pressing the enter key or clicking a cal
 
 ![S-Issue-01](assets/feature-img/s-issue-1~2-solution.png)
 
+- S-Issue-03: Time in hours seems to be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
+
+- before:
+
+![S-Issue-03-UI](assets/feature-img/S-Issue-03.png)
+
+![S-Issue-03-Code](assets/feature-img/S-Issue-03-code.png)
+
+  - Solution: Scale back the conversion part from miles to km and vice versa and focus on travel time.\
+  Change event listeners to let the select element switch the visual units for better UX.
+
+- after:
+
+![S-Issue-03-Code](assets/feature-img/S-Issue-03-code-solution.png)
+
 - S-Issue-04: Function to calculate travel cost is not working
 
 ![S-Issue-04](assets/feature-img/error-travel-cost.png)
@@ -360,12 +375,6 @@ Therefore, an additional action such as pressing the enter key or clicking a cal
 CC-Issue-1: Possibly add a switch currency button to swap the two currently in play
 
 ##### Travel Time
-
-- S-Issue-03: Time in hours seems top be a little glitchy when adding a value, then converting from miles -> km -> miles. It says it takes 37 mins to go 1m at 1 mph
-
-![S-Issue-03](assets/feature-img/S-Issue-03.png)
-
-  - Solution:
 
 ## Technologies Used
 
@@ -456,10 +465,11 @@ To clone the the repository:
 - All the great videos that are periodically posted by slack-bot in the various channels (**You're a legend!**).
 - Erik_4P_Lead for his advice and tips in early production process. [LinkedIn](https://www.linkedin.com/in/erikas-ramanauskas-full-stack-developer/) [GitHub](https://github.com/Erikas-Ramanauskas)
 - Tomáš_Kubánčik_Alumni_lead For additional advice on solving JavaScript bugs. [LinkedIn](https://www.linkedin.com/in/tomas-kubancik/) [GitHub](https://github.com/tomik-z-cech)
+- Daisy Mc Girr For additional sharing her wisdom in various community-coffee meetings. [LinkedIn](https://www.linkedin.com/in/daisy-mcgirr-4a3671173/) [GitHub](https://github.com/Dee-McG)
 
 ### Honourable mentions
 
-- I would like to thank my mentor Luke Buchanan, for great feedback and advice.
+- I would like to thank my mentor Luke Buchanan, for great feedback and advice. [LinkedIn](https://www.linkedin.com/in/lukebuchanan67/)
 
 - Vernell for his valuable and patient advice and tips to find the right path for solution. [LinkedIn](https://www.linkedin.com/in/vernellclark/) [GitHub](https://github.com/VCGithubCode)
 
