@@ -28,7 +28,10 @@ function initializeModalMenu() {
     openButton.addEventListener("click", () => openModal(modal, blurContent));
     closeButton.addEventListener("click", () => closeModal(modal, blurContent));
   }
-  return { modal, blurContent };
+  return {
+    modal,
+    blurContent
+  };
 }
 
 /**
@@ -247,4 +250,3 @@ function handleInstructionLinkClicks() {
     });
   });
 }
- 
