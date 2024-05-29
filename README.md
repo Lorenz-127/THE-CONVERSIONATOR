@@ -242,7 +242,7 @@ This action should enable the user to navigate the page with as few clicks as po
 
 ### Accessibility
 
-- I used alt="", aria-labels and semantic elements like as much as possible to make the site easy to navigate and understand by keyboard and/or screen reader users.
+- Add alt="", aria-labels and semantic elements like as much as possible to make the site easy to navigate and understand by keyboard and/or screen reader users.
 
 - All icons on the page scale by a factor of 1.7 when clicked to give the user visual feedback for their action.
 
