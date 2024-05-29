@@ -390,7 +390,6 @@ CC-Issue-1: Possibly add a switch currency button to swap the two currently in p
 **Google Chrome** - The website was tested in google Chrome dev tools.\
 **Favicon Generator Website** - The favicon was made by favicon.io\
 
-
 ### Languages Used
 
 - **HTML**
