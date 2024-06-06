@@ -6,7 +6,7 @@
   - [Lighthouse](#lighthouse)
   - [HTML](#html)
   - [External Testing](#external-testing)
-
+  
 ## Validator Testing
 
 ### Home
@@ -37,6 +37,19 @@
 ![jigsaw-css ](assets/feature-img/w3c-css-validation.png)
 
   - pass
+
+### JSHINT
+
+  - script.js
+    - pass
+
+![jshint-calculators](assets/feature-img/calculator-js.png)
+
+  - navigation.js
+    - pass
+
+![jshint-navigation](assets/feature-img/navigation-js.png)
+
 
 [Top](#tests)
 
